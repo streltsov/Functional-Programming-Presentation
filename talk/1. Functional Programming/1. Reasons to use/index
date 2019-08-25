@@ -1,0 +1,11 @@
+ Why should I even be interested in FP?
+There are a couple of reasons:
+
+- Functional means declarative - declare what want to do, let the compiler do the rest. I find FP programs to be much more descriptive than others.
+- FP ensures immutability. Once created, variables cannot be changed. With that, you can forget about constantly passing reference to an object and mutating it unknowingly along the way.
+- Functions are like building blocks - you can have a lot of them, with any shape you want. Just start building, like with Legos.
+- Pure functions help in preventing bugs. Just imagine having no unexpected behavior for your functions – isn’t that neat?
+- FP simplifies your unit testing. Having most of your functions pure makes simpler test scenarios and ensures test separation.
+- It broadens your mind and lets you try new things. It gives you a new perspective and makes you a more reliable engineer. Switching mindset like that is a great challenge for any developer.
+- FP technologies are growing like never before. They’re becoming popular and you can see them more in production applications. Companies are also looking for people with knowledge of FP more often.
+[https://dev-self-start.blogspot.com/2019/08/how-i-started-with-functional.html]

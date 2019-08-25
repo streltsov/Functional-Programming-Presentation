@@ -1,0 +1,10 @@
+functions vs procedures
+  All functions are procedures, but not all procedures are a functions
+  A function without a return statement is not a function, it is a procedure. (It should be some useful return)
+
+Легко тестировать.
+Легко переиспользовать.
+
+functional redux
+
+Писать код с побочными эффектами намного прощею, у меня очень хорошо получается, не очень хорошо получается без них, но я работаю над этим.

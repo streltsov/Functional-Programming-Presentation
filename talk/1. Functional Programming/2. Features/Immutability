@@ -1,0 +1,6 @@
+Immutability is a core tenant of FP. Immutable data tends to be safer, avoiding unexpected side effects (
+), and is less prone to causing bugs. Immutable data is:
+ Easy to think about. 
+ Thread safe!
+ Easy to memoize.
+Potentially slower than mutating data. *
