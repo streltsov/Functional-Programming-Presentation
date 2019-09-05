@@ -1,4 +1,5 @@
 1. Readability
+always keep in mind that code readability is our overall most important goal [getify]
 Remember, every single line of code you write has a reader cost associated with it.
 The best code is the code that is most readable in the future because it strikes exactly the right balance between what it can/should be (idealism) and what it must be (pragmatism).
 
