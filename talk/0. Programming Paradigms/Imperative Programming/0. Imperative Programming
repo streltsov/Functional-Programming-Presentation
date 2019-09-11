@@ -1,18 +1,7 @@
-Одна из характерных черт императивного программирования - наличие переменных с операцией "разрушающего присвоения". То есть, была переменная А, было у нее значение Х. Алгоритм предписывает на очередном шаге присвоить переменной А значение Y.
+ИП старейший и наиболее развитая парадигма. Она появилась вместе с первыми компьютерами в 40-х годах. Это способ программирования которым пользовались до сих пор и продолжают пользоваться большинство разработчиков. 
 
+Для любой задачи можно задать два вопроса: что мы хотим получить и как мы хотим это получить. Так вот, ИП это про то как мы хотим что-то получить.
 
-Imperative programming is a paradigm of computer programming in which the program describes a sequence of steps that change the state of the computer. Unlike declarative programming, which describes "what" a program should accomplish, imperative programming explicitly tells the computer "how" to accomplish it. Programs written this way often compile to binary executables that run more efficiently since all CPU instructions are themselves imperative statements.
+Важные аспекты ИП это последовательность инструкций и изменяемые данные.
 
-To make programs simpler for a human to read and write, imperative statements can be grouped into sections known as code blocks. In the 1950s, the idea of grouping a program's code into blocks was first implemented in the ALGOL programming language. They were originally called "compound statements," but today these blocks of code are known as procedures. Once a procedure is defined, it can be used as a single imperative statement, abstracting the control flow of a program and allowing the developer to express programming ideas more naturally. This type of imperative programming is called procedural programming, and it is a step towards higher-level abstractions such as declarative programming.
-
-
-which the program describes a sequence of steps that change the state of the computer
-
-The essential aspects of imperative programming are sequenced instructions and mutable data.
-
-Most prominent to imperative programming is the sequential flow of instructions and branching.
-Code lines are executed one at a time from the top-to-bottom
-
-Минусы
-
-При императивном подходе к составлению кода широко используется присваивание. Наличие операторов присваивания увеличивает сложность модели вычислений и делает императивные программы подверженными специфическим ошибкам, не встречающимся при функциональном подходе[1]. 
+У ИП пошаговый подход к выполнению задачи. Разработчик разработчик пишет комманды которые в точности, от начала до конца описывают как выполнить задачу. Омманды исполняются по одной, сверху вниз. По ходу выполнения комманд, изменяется глобальное состояние программы в котором записаны её данные. Это наряду с пошаговым выплнением, характерная черта ИП: наличие переменных с операцией разрушающего присвоения.
