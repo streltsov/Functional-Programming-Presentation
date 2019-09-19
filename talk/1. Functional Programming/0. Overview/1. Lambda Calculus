@@ -1,3 +1,14 @@
 И хотя для многих людей ФП может показаться чем-то новым, -- возможно потому, что несколько назад вокруг него был ажиотаж, который сейчас спадает -- в основе ФП заложена настоящая наука, которую создавали лучшие умы которые этот мир видел, для того что бы решать совершенно разные проблемы. В основе этой науки лежит лямбда исчисление, поэтому обьяснение этой не простой темы -- необходимо.
 
 lambda is a signifier notation that we gonna use to indicate that we starting a definition of a function. So we can read this as: we starting to define a function, which takes a single input or parameter and it returns some expression, somebody. In lamda calculus it calls lambda abstraction, but it basicaly means uary anonymus function. Unary means it takes a single input.
+
+church numerals
+ifThenElse
+booleans
+
+
+recursion (λx.xx)(λx.xx)
+cyrring    λx.λy.xy 
+
+
+

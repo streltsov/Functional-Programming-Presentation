@@ -328,6 +328,25 @@
     </section>
 
     <section class="slide">
+      <pre style="font-size: 17px">
+            <code>bool flag;</code>
+	    <code>int f (int n) {</code>
+            <code>    int retVal;</code>
+            <code>    if flag then retVal = 2 * n;</code>
+            <code>            else retVal = n;</code>
+            <code>    flag = ! flag;</code>
+            <code>    return retVal;</code>
+            <code>}</code>
+            <code> </code>
+	    <code>void test() {</code>
+            <code>    flag = true;</code>
+            <code>    print ( "f(1) + f(2) = %d/n", f(1) + f(2) );</code>
+            <code>    print ( "f(2) + f(1) = %d/n", f(2) + f(1) );</code>
+	    <code>}</code>
+        </pre>
+    </section>
+
+    <section class="slide">
       <img src="pictures/ocaml-logo.png" width="220px" />
       <h2>Shower key features</h2>
       <ol>
