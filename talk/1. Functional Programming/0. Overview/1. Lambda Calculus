@@ -1,6 +1,9 @@
 И хотя для многих людей ФП может показаться чем-то новым, -- возможно потому, что несколько назад вокруг него был ажиотаж, который сейчас спадает -- в основе ФП заложена настоящая наука, которую создавали лучшие умы которые этот мир видел, для того что бы решать совершенно разные проблемы. В основе этой науки лежит лямбда исчисление, поэтому обьяснение этой не простой темы -- необходимо.
 
-lambda is a signifier notation that we gonna use to indicate that we starting a definition of a function. So we can read this as: we starting to define a function, which takes a single input or parameter and it returns some expression, somebody. In lamda calculus it calls lambda abstraction, but it basicaly means uary anonymus function. Unary means it takes a single input.
+The lambda calculus can be called the smallest universal programming language of the world. It was introduced in the 1930s by Alonzo Church as a way of formalizing the concept of effective computability.
+
+The lambda calculus is universal in the sense that any computable function can be expressed and evaluated using this formalism. It is thus equivalent to Turing machines.
+lambda is a signifier notation that we gonna use to indicate that we starting a definition of a function. So we can read this as: we starting to define a function, which takes a single input or parameter and it returns some expression, somebody. In lamda calculus it calls lambda abstraction, but it basicaly means unary anonymus function. Unary means it takes a single input.
 
 church numerals
 ifThenElse
@@ -11,4 +14,57 @@ recursion (λx.xx)(λx.xx)
 cyrring    λx.λy.xy 
 
 
+Lambda Calculus
 
+Identity I := λa.a;
+a => a
+
+Haskell base: id 2 == 2
+
+Mockingbird M := λf.ff;
+f = f(f)
+
+What is M(I) ?
+What about M(M) ?
+Yeah, StackOverflow.
+M(M) == M(M) == M(M)
+It calls Omega Combinator.
+
+Kestrel K := λab.a;
+K = a => b => a
+
+What is K(I)(M) ?
+What is K(K)(M) ?
+
+Haskell base: const 7 2 == 7
+Why const?
+K5 = K(5);
+K5(3) == 5;
+K5(9) == 5;
+K5() == 5;
+
+K I x = I;
+K(I)(x) == I
+
+K I x y = I y;
+K(I)(x)(y) == I(y)
+
+K I x y = I y = y;
+K(I)(x)(y) == I(y) = y
+
+K I x y = y;
+K(I)(x)(y) == y
+
+Does anybody see where I am going with this?
+
+Kite KI := λab.b
+KI = K I
+KI = a => b => b
+Ki = K(I)
+
+K(I)(1)(2) == 2
+
+We can do KI = a => b => b, but
+Its cool how combinators creates other combinators
+
+K(I)(M)(KI) == KI

@@ -1,0 +1,61 @@
+Mutable state though is one of the biggest sources of complexity in software.
+
+Why is mutable state such a big problem? As I have said earlier, the human brain is the most powerful machine in the known universe. However, our brains are really bad at working with state since we can only hold about five items at a time in our working memory. It is much easier to reason about a piece of code if you only think about what the code does, not what variables it changes around the codebase.
+
+Programming with mutable state is an act of mental juggling️. I don’t know about you, but I could probably juggle two balls. Give me three or more and I will certainly drop all of them. Coding is the same, I became much more productive and my code became much more reliable once I dropped the mutable state.
+
+const increasePrice = (item, increaseBy) => {
+  // never ever do this
+  item.price += increaseBy;
+
+  return item;
+};
+
+const oldItem = { price: 10 };
+
+const newItem = increasePrice(oldItem, 3);
+
+// prints newItem.price 13
+console.log('newItem.price', newItem.price);
+
+// prints oldItem.price 13
+// unexpected?
+console.log('oldItem.price', oldItem.price);
+
+////
+
+const increasePrice = (item, increaseBy) => ({
+  ...item,
+  price: item.price + increaseBy
+});
+
+const oldItem = { price: 10 };
+
+const newItem = increasePrice(oldItem, 3);
+
+// prints newItem.price 13
+console.log('newItem.price', newItem.price);
+
+// prints oldItem.price 10
+// as expected!
+console.log('oldItem.price', oldItem.price);
+
+Don’t push your arrays
+
+const a = ['apple', 'orange'];
+const b = a;
+
+a.push('microsoft')
+
+// ['apple', 'orange', 'microsoft']
+console.log(a);
+
+// ['apple', 'orange', 'microsoft']
+// unexpected?
+console.log(b);
+
+I think you might have expected the array b to stay the same? This error could have been easily avoided had we created a new array instead of calling push .
+Such issues can easily be prevented by constructing new arrays instead:
+const newArray = [...a, 'microsoft'];
+
+As I said earlier, in non-deterministic programs the output of 2+2 or calculator.Add(2, 2) mostly is equal to four, but sometimes it might become equal to three, five, and maybe even 1004. The dependencies of the Calculator object might change the result of the computation in subtle, but profound ways. Such issues become even more apparent when concurrency is involved.
