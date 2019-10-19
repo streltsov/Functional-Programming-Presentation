@@ -68,3 +68,33 @@ We can do KI = a => b => b, but
 Its cool how combinators creates other combinators
 
 K(I)(M)(KI) == KI
+
+Combinators is functions with no free variables
+
+λb.b combinator
+λb.a not a combinator
+λab.a combinator
+λa.ab not a combinator
+λabc.c(λe.b) combinator
+
+/* Show combinators we have learnt; Tell about how it is cool to combine combinators into another ones */
+
+Cardinal C := λfab.fba;
+
+Guess what does this combinator does?
+
+Cardinal C := λfab.fba;
+C = f => a => b => f(b)(a)
+
+C K I M = ?
+C(K)(I)(M) == ?
+
+C K I M = M
+C(K)(I)(M) == M
+
+KI I M = M
+KI(I)(M) == M
+
+Haskell base: flip const 1 8 == 8
+
+Eveerything can be functions

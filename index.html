@@ -5,40 +5,26 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css" />
-    <style>
-      .shower {
-        --slide-ratio: calc(16 / 9);
-      }
-      .slide {
-        background-color: #212121;
-      }
-      .slide,
-      .slide li::before,
-      .slide h2 {
-        color: #fafafa;
-      }
+    <link rel="stylesheet" href="style.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Charm&display=swap"
+      rel="stylesheet"
+    />
 
-      .flex {
-        display: flex;
-        justify-content: space-around;
-      }
-      .highlight {
-        color: #45a1ff;
-        text-shadow: 1px 1px 2px black, 0 0 25px #45a1ff, 0 0 5px darkblue;
-      }
-      .slide.chapter h2 {
-        color: #fafafa;
-        text-align: center;
-      }
-      .center {
-        text-align: center;
-      }
-    </style>
+    <link
+      href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i&display=swap&subset=greek"
+      rel="stylesheet"
+    />
   </head>
+
   <body class="shower list">
     <header class="caption">
-      <h1>Shower Presentation Engine</h1>
-      <p>Yours Truly, Famous Inc.</p>
+      <h1>Functional Programming</h1>
     </header>
 
     <section class="slide" id="cover">
@@ -65,6 +51,45 @@
       <p>
         Монада - это просто моноид в категории эндофункторов
       </p>
+    </section>
+
+    <section class="slide flex middle">
+      <h2 class="center moderate">Lambda Calculus</h2>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center moderate">λf.(λx.(f(xx)) λx.(f(xx)))</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λx.x</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big"><span class="glow">λ</span>x.x</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λ<span class="glow">x</span>.x</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λx<span class="glow">.</span>x</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λx.<span class="glow">x</span></p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λx.x</p>
+      <p class="center">Лямбда абстракция</p>
+    </section>
+
+    <section class="slide">
+      <h2>Лямбда исчисление</h2>
+      <h2 class="center">λf.ff</h2>
+      mockingbird
     </section>
 
     <section class="slide">
@@ -192,96 +217,6 @@
         </div>
       </div>
     </section>
-
-    <section class="slide chapter">
-      <h2>Лямбда исчисление</h2>
-    </section>
-
-    <section class="slide" id="lambda">
-      <style>
-        #lambda .lambda {
-          font-size: 160px;
-          font-weight: 400;
-          text-align: center;
-          padding-bottom: 240px;
-        }
-      </style>
-      <h2 class="shout shrink lambda">λ?</h2>
-    </section>
-
-    <section class="slide">
-      <style>
-        .slide .lambda {
-          font-size: 160px;
-          font-weight: 400;
-          text-align: center;
-        }
-      </style>
-      <h2 class="lambda">λx.x</h2>
-    </section>
-
-    <section class="slide">
-      <style>
-        .slide .lambda {
-          font-size: 160px;
-          font-weight: 400;
-          text-align: center;
-        }
-      </style>
-      <h2 class="lambda"><span class="highlight">λ</span>x.x</h2>
-    </section>
-
-    <section class="slide">
-      <style>
-        .slide .lambda {
-          font-size: 160px;
-          font-weight: 400;
-          text-align: center;
-        }
-      </style>
-      <h2 class="lambda">λ<span class="highlight">x</span>.x</h2>
-    </section>
-
-    <section class="slide">
-      <style>
-        .slide .lambda {
-          font-size: 160px;
-          font-weight: 400;
-          text-align: center;
-        }
-      </style>
-      <h2 class="lambda">λx<span class="highlight">.</span>x</h2>
-    </section>
-
-    <section class="slide">
-      <style>
-        .slide .lambda {
-          font-size: 160px;
-          font-weight: 400;
-          text-align: center;
-        }
-      </style>
-      <h2 class="lambda">λx.<span class="highlight">x</span></h2>
-    </section>
-
-    <section class="slide">
-      <style>
-        .slide .lambda {
-          font-size: 160px;
-          font-weight: 400;
-          text-align: center;
-        }
-      </style>
-      <h2 class="lambda">λx.x</h2>
-      <h2 class="center">Лямбда абстракция</h2>
-    </section>
-
-    <section class="slide">
-      <h2>Лямбда исчисление</h2>
-      <h2 class="center">λf.ff</h2>
-      mockingbird
-    </section>
-
     <section class="slide">
       <h2>Чего в FP нет:</h2>
       <ol>
