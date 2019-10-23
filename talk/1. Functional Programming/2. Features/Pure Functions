@@ -2,9 +2,34 @@ functions vs procedures
   All functions are procedures, but not all procedures are a functions
   A function without a return statement is not a function, it is a procedure. (It should be some useful return)
 
-Легко тестировать.
-Легко переиспользовать.
 
 functional redux
 
 Писать код с побочными эффектами намного прощею, у меня очень хорошо получается, не очень хорошо получается без них, но я работаю над этим.
+
+Functions in Haskell are related to functions in mathematics, which is to say they map an input or set of inputs to output. A function is an expression that is applied to an argument and always returns a result.
+
+
+Pure Function Features
+1. Given the Same Input, Always Return the Same Output; A function is only pure if, given the same input, it will always produce the same output.
+It does not write to log files, do network requests, ask for user input, or change program state.
+function which calls an impure function is impure as well
+2. Pure Functions Produce No Side Effects; A pure function produces no side effects, which means that it can’t alter any external state.
+Put here an example of mutating object passed as argument
+
+Benefits of using pure functions
+1. Easy to test
+2. Easy to reuse
+
+The Trouble with Shared State
+
+Puzzles
+
+Is that function pure?
+
+Math.random();
+Math.floor()
+const time = () =>
+  new Date().toLocaleTimeString();
+
+MOVE TO CURRYING

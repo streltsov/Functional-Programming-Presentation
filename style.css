@@ -3,6 +3,8 @@
 }
 .slide {
   background-color: #212121;
+  padding-top: 24px;
+  padding-bottom: 24px;
 }
 .slide,
 .slide li::before,
@@ -10,9 +12,21 @@
   color: #fafafa;
 }
 
+img {
+  max-width: 100%;
+  max-height: 100%;
+}
+
 .lambda {
   font-family: 'Charm', 'Alegreya Sans', sans-serif !important;
+  margin: 0 !important;
 }
+
+.js,
+code {
+  font-family: 'Inconsolata', monospace !important;
+}
+
 .flex {
   display: flex;
   flex-direction: column;
@@ -25,6 +39,10 @@
 }
 .space-around {
   justify-content: space-around;
+}
+.sub-moderate {
+  font-size: 40px;
+  font-weight: 400;
 }
 .moderate {
   font-size: 60px;

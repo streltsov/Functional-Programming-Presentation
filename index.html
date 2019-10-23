@@ -6,6 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="shower/themes/ribbon/styles/styles.css" />
     <link rel="stylesheet" href="style.css" />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap"
+      rel="stylesheet"
+    />
+
     <link
       href="https://fonts.googleapis.com/css?family=Charm&display=swap"
       rel="stylesheet"
@@ -27,30 +33,94 @@
       <h1>Functional Programming</h1>
     </header>
 
-    <section class="slide" id="cover">
-      <style>
-        #cover .lambda {
-          font-size: 160px;
-          font-weight: 400;
-          text-align: center;
-        }
-        #cover h2 {
-          color: #fafafa;
-          text-align: center;
-        }
-        #cover p {
-          font-size: 18px;
-          font-style: italic;
-          color: #9e9e9e;
-          margin-top: 150px;
-          text-align: right;
-        }
-      </style>
-      <h2 class="lambda">λ</h2>
-      <h2>Functional Programming</h2>
-      <p>
-        Монада - это просто моноид в категории эндофункторов
-      </p>
+    <section class="slide flex middle">
+      <h2 class="center lambda" style="font-size: 120px">λ</h2>
+      <h2 class="big center">Functional Programming</h2>
+    </section>
+
+    <section class="slide flex middle">
+      <h2 class="center moderate">Introduction</h2>
+    </section>
+
+    <!--One very common way people classify languages is to organize them into paradigms. You can think of a paradigm
+      as a group of languages that share similar characteristics. There are many paradigms currently in use: procedural,
+      functional, and object-oriented. Many of these terms are often misused or confused; there’s also some degree of overlap
+      between different paradigms, which definitely doesn’t make things easier.-->
+
+    <!--Существует два основных способа программирования. Первый и по историческим причинам самый распространенный,
+      способ при котором программист дает компьютеру последовательность инструкций для того чтобы тот вел себя определенным образом.-->
+
+    <section class="slide" id="picture">
+      <img src="pictures/programming_paradigms.jpg" />
+    </section>
+
+    <!--The earliest imperative languages were the machine languages of the original computers. In these languages,
+      instructions were very simple, which made hardware implementation easier, but hindered the creation of complex programs.-->
+
+    <section class="slide" id="picture">
+      <img src="pictures/machine_lang.jpeg" />
+    </section>
+
+    <!-- В 1954 году Джон Бакуп из IBM, разработал первый язык высокого уровня, который убирал препятствия при создании сложных программ.-->
+
+    <section class="slide flex middle">
+      <img class="center" src="pictures/john_backus.jpg" alt="" />
+      <h3 class="center">John Warner Backus</h3>
+    </section>
+
+    <section class="slide flex middle">
+      <img class="center" src="pictures/fortran.jpeg" alt="" />
+    </section>
+
+    <section class="slide ">
+      <pre style="font-size: 16px">
+      <code> READ INPUT TAPE 5, 501, IA, IB, IC</code>
+      <code> 501 FORMAT (3I5)</code>
+      <code> IF (IA) 777, 777, 701</code>
+      <code> 701 IF (IB) 777, 777, 702</code>
+      <code> 702 IF (IC) 777, 777, 703</code>
+      <code> 703 IF (IA+IB-IC) 777, 777, 704</code>
+      <code> 704 IF (IA+IC-IB) 777, 777, 705</code>
+      <code> 705 IF (IB+IC-IA) 777, 777, 799</code>
+      <code> 777 STOP 1</code>
+      <code> 799 S = FLOATF (IA + IB + IC) / 2.0</code>
+      <code> AREA = SQRTF( S * (S - FLOATF(IA)) * (S - FLOATF(IB)) *</code>
+      <code> + (S - FLOATF(IC)))</code>
+      <code> WRITE OUTPUT TAPE 6, 601, IA, IB, IC, AREA</code>
+      <code> 601 FORMAT (4H A= ,I5,5H B= ,I5,5H C= ,I5,8H AREA= ,F10.2,</code>
+      <code> + 13H SQUARE UNITS)</code>
+      <code> STOP</code>
+      <code> END</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <img class="center" src="pictures/algol.jpg" alt="" />
+    </section>
+
+    <section class="slide flex middle">
+      <img class="center" src="pictures/mumps_lang.jpg" alt="" />
+    </section>
+
+    <section class="slide flex middle">
+      <img class="center" src="pictures/cobol_lang.jpg" alt="" />
+    </section>
+
+    <section class="slide flex middle">
+      <img class="center" src="pictures/imperative_langs.png" alt="" />
+    </section>
+
+    <section class="slide flex middle">
+      <img src="pictures/Von_Neumann_Architecture.svg" alt="" />
+    </section>
+
+    <section class="slide flex middle">
+      <img class="center" src="pictures/john_von_neumann.jpg" alt="" />
+      <h3 class="center">John von Neumann</h3>
+    </section>
+
+    <section class="slide flex middle">
+      <img class="center" src="pictures/c_lang.svg" alt="" />
     </section>
 
     <section class="slide flex middle">
@@ -83,13 +153,26 @@
 
     <section class="slide flex middle">
       <p class="lambda center big">λx.x</p>
-      <p class="center">Лямбда абстракция</p>
+      <p class="js center moderate">x => x</p>
     </section>
 
-    <section class="slide">
-      <h2>Лямбда исчисление</h2>
-      <h2 class="center">λf.ff</h2>
-      mockingbird
+    <section class="slide flex middle ">
+      <pre class="sub-moderate">
+      <code>x => x</code>
+      <code> </code>
+      <code>function(x) {</code>
+      <code> return x;</code>
+      <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λx.x</p>
+      <p class="js center moderate">x => x</p>
+    </section>
+
+    <section class="slide flex middle">
+      <h2 class="center moderate">Pure Functions</h2>
     </section>
 
     <section class="slide">
@@ -111,25 +194,6 @@
         <strong>Паради́гма программи́рования</strong>
         — это способ или стиль программирования
       </p>
-    </section>
-
-    <section class="slide" id="picture">
-      <figure>
-        <img
-          class="cover"
-          src="pictures/programming_paradigms.jpg"
-          alt="Overview of the various programming paradigms according to Peter Van Roy"
-        />
-        <figcaption class="copyright right white">
-          Overview of the various programming paradigms according to Peter Van
-          Roy
-        </figcaption>
-      </figure>
-      <style>
-        #picture h2 {
-          color: white;
-        }
-      </style>
     </section>
 
     <section class="slide">
