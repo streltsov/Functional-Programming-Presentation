@@ -33,3 +33,7 @@ const time = () =>
   new Date().toLocaleTimeString();
 
 MOVE TO CURRYING
+
+1. All Functions must take an argument;
+2. All Functions must return a value;
+3. Anytime a function is called with the same argument, it must return the same value;

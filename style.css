@@ -27,6 +27,12 @@ code {
   font-family: 'Inconsolata', monospace !important;
 }
 
+.no-margins {
+  margin: 0;
+}
+.no-paddings {
+  padding: 0;
+}
 .flex {
   display: flex;
   flex-direction: column;
@@ -47,6 +53,9 @@ code {
 .moderate {
   font-size: 60px;
   font-weight: 400;
+}
+.sub-big {
+  font-size: 80px !important;
 }
 .big {
   font-size: 160px;

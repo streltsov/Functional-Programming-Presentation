@@ -39,7 +39,22 @@
     </section>
 
     <section class="slide flex middle">
-      <h2 class="center moderate">Introduction</h2>
+      <h2 class="center moderate">Paradigms</h2>
+    </section>
+
+    <section class="slide flex middle">
+      <p>
+        <strong>Паради́гма программи́рования</strong>
+        — это совокупность идей и понятий, определяющих стиль написания
+        компьютерных программ <br />
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p>
+        <strong>Паради́гма программи́рования</strong>
+        — это способ или подход к программированию
+      </p>
     </section>
 
     <!--One very common way people classify languages is to organize them into paradigms. You can think of a paradigm
@@ -50,8 +65,12 @@
     <!--Существует два основных способа программирования. Первый и по историческим причинам самый распространенный,
       способ при котором программист дает компьютеру последовательность инструкций для того чтобы тот вел себя определенным образом.-->
 
-    <section class="slide" id="picture">
+    <section class="slide no-paddings">
       <img src="pictures/programming_paradigms.jpg" />
+    </section>
+
+    <section class="slide flex middle">
+      <h3 class="center">Imperative programming</h3>
     </section>
 
     <!--The earliest imperative languages were the machine languages of the original computers. In these languages,
@@ -134,6 +153,13 @@
       <code class="next" >Найди здание с вывеской "Магазин"</code>
       <code class="next" >Войди внутрь</code>
       </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <p>
+        <i>Императи́в</i> (лат. imperativus — повелительный,<br />
+        от лат. impero — повелеваю)
+      </p>
     </section>
 
     <section class="slide flex middle">
@@ -272,6 +298,61 @@
       />
     </section>
 
+    <section class="slide flex middle">
+      <h2 class="center sub-big"><i>«Как»</i></h2>
+      <h2 class="center no-margins">сделать</h2>
+    </section>
+
+    <section class="slide flex middle">
+      <h3>1. Triple</h3>
+      <pre>
+        <code>function triple(array) {</code>
+        <code>  let results = []</code>
+        <code>  for (let i = 0; i < array.length; i++) {</code>
+        <code>    results.push(array[i] * 3)</code>
+        <code>  }</code>
+        <code>return results</code>
+        <code>} </code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <h3>2. Filter by length</h3>
+      <pre>
+        <code>function filterByLength(array, length) {</code>
+        <code>  let results = []</code>
+        <code>  for (let i = 0; i < array.length; i++) {</code>
+	<code>    if (array[i].length > length) {</code>
+        <code>      results.push(array[i])</code>
+	<code>    }</code>
+        <code>  }</code>
+        <code>return results</code>
+        <code>} </code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <h3>3. Multiply</h3>
+      <pre>
+        <code>function multiply(array) {</code>
+        <code>  let results = 1;</code>
+        <code>  for (let i = 0; i < array.length; i++) {</code>
+        <code>    results = results * array[i];</code>
+        <code>  }</code>
+        <code>return results</code>
+        <code>} </code>
+      </pre>
+    </section>
+    <!--Imperative programming is a paradigm of computer programming in which the program describes a sequence of steps that
+      change the state of the computer.-->
+
+    <!-- In computer science, imperative programming, as contrasted with declarative programming, is a programming paradigm
+      that describes computation as statements that change a program state. In much the same way as the imperative mood in
+      natural languages expresses commands to take action, imperative programs are a sequence of commands for the computer to perform.-->
+
+    <!--The hardware implementation of almost all computers is imperative; nearly all computer hardware is designed to execute machine code,
+	which is native to the computer, written in the imperative style.-->
+
     <!--Mirrors computer architecture-->
     <!--the imperative paradigm most closely resembles the actual machine itself, so the programmer is much closer to the machine;
       because of such closeness, the imperative paradigm was the only one efficient enough for widespread use until recently.-->
@@ -341,112 +422,6 @@
       <h2 class="center moderate">Pure Functions</h2>
     </section>
 
-    <section class="slide">
-      <h2 class="shout">Парадигма</h2>
-    </section>
-
-    <section class="slide">
-      <h2></h2>
-      <p>
-        <strong>Паради́гма программи́рования</strong>
-        — это совокупность идей и понятий, определяющих стиль написания
-        компьютерных программ <br />
-      </p>
-    </section>
-
-    <section class="slide">
-      <h2></h2>
-      <p>
-        <strong>Паради́гма программи́рования</strong>
-        — это способ или стиль программирования
-      </p>
-    </section>
-
-    <section class="slide">
-      <h2>Парадигмы</h2>
-      <div class="columns two">
-        <h3 class="next">Императивная</h3>
-        <h3 class="next">Декларативная</h3>
-      </div>
-    </section>
-
-    <section class="slide">
-      <h2>Императивное программирование</h2>
-      <p>
-        <i>Императи́в</i> (лат. imperativus — повелительный,<br />
-        от лат. impero — повелеваю)
-      </p>
-    </section>
-
-    <section class="slide">
-      <h2>Императивное программирование</h2>
-      <p>
-        Императивная парадигма, явно говорит компьютеру, <i>что</i> делать и
-        <i>как</i> это делать.
-      </p>
-    </section>
-
-    <section class="slide">
-      <h2>Императивное программирование</h2>
-      <pre>
-      <code>var a = 5; </code>
-      <code>var b = calculate(a);</code>
-      <code>if( b > 10 ) {</code>
-      <code> print("Too big");</code>
-      <code> return;</code>
-      <code>}</code>
-      </pre>
-    </section>
-
-    <section class="slide">
-      <h2>Императивное программирование</h2>
-      Слайд про щи
-    </section>
-
-    <section class="slide">
-      <h2>Императивное программирование</h2>
-      <div class="flex">
-        <img height="300px" src="pictures/fortran.jpeg" alt="" />
-        <img height="300px" src="pictures/algol.jpg" alt="" />
-      </div>
-    </section>
-
-    <section class="slide">
-      <h2>Парадигмы</h2>
-      <div class="columns two">
-        <div>
-          <h3>Императивная</h3>
-          <ol>
-            <li>Процедурная</li>
-          </ol>
-        </div>
-        <div>
-          <h3>Декларативная</h3>
-        </div>
-      </div>
-    </section>
-
-    <section class="slide">
-      <h2>Two columns if you like</h2>
-      <div class="columns two">
-        <div>
-          <h3>Императивные</h3>
-          <ol>
-            <li>Процедурное</li>
-            <li>Параллельное</li>
-            <li>Объектно Ориентированное</li>
-          </ol>
-        </div>
-        <div>
-          <h3>Декларативные</h3>
-          <ol>
-            <li>Built on HTML, CSS and JavaScript</li>
-            <li>Works in all modern browsers</li>
-            <li>Функциональное</li>
-          </ol>
-        </div>
-      </div>
-    </section>
     <section class="slide">
       <h2>Чего в FP нет:</h2>
       <ol>
@@ -561,13 +536,7 @@
       <figure>
         <blockquote>
           <p>
-            Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
-            eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim
-            ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-            aliquip ex ea commodo consequat. Duis aute irure dolor in
-            reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-            pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-            culpa qui officia.
+            Life is to short for imperative programming
           </p>
         </blockquote>
         <figcaption>Marcus Tullius Cicero</figcaption>
