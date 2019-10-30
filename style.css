@@ -17,6 +17,9 @@ img {
   max-height: 100%;
 }
 
+.pale {
+  color: #4a4a4f;
+}
 .lambda {
   font-family: 'Charm', 'Alegreya Sans', sans-serif !important;
   margin: 0 !important;
