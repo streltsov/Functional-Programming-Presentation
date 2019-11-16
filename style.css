@@ -17,6 +17,10 @@ img {
   max-height: 100%;
 }
 
+.fit {
+  height: 100%;
+}
+
 .pale {
   color: #4a4a4f;
 }
