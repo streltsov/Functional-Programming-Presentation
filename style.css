@@ -17,6 +17,14 @@ img {
   max-height: 100%;
 }
 
+.bold {
+  font-weight: 600 !important;
+}
+
+.white {
+  background-color: #eee !important;
+}
+
 .fit {
   height: 100%;
 }

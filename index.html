@@ -336,9 +336,63 @@
       <span> 40 STMT-3</span>
     </section>
 
+    <!-- FP -->
+
+    <section class="slide flex middle">
+      <h3 class="center">Declarative programming</h3>
+    </section>
+
+    <!-- В 30-х годах прошлого века, немецкий математик Дэвид Гилберт сформулировал так называемую "Проблему разрешения" -->
+    <section class="slide flex middle">
+      <img class="center fit" src="pictures/david_hilbert.jpg" alt="" />
+      <h3 class="center">David Hilbert (1862–1943)</h3>
+    </section>
+
+    <!-- Суть её в том, что вот есть у нас некий формальный язык, на котором можно написать какое-либо утверждение.
+      Существует ли алгоритм, за конечное число шагов определяющий его истинность или ложность? -->
+    <section class="slide flex middle">
+      <h3 class="center moderate bold">Entscheidungsproblem</h3>
+    </section>
+
+    <!--Ответ был найден великим учёными того времени Аланом Тьюрингом. -->
+    <section class="slide flex middle">
+      <img class="center fit" src="pictures/alan_turing.jpg" alt="" />
+      <h3 class="center">Alan Turing (1912–1954)</h3>
+    </section>
+
+    <!-- С помощью абстрактной вычислительной машины (машины Тьюринга),
+	он показал, что для арифметики такого алгоритма не существует в принципе, т.е. Entscheidungsproblem в общем случае неразрешима. -->
+    <section class="slide flex middle">
+      <img class="center fit" src="pictures/turing_machine.jpg" alt="" />
+      <h3 class="center">An implementation of a Turing machine</h3>
+    </section>
+
     <section class="slide flex middle">
       <img class="center fit" src="pictures/alonzo_church.jpg" alt="" />
       <h3 class="center">Alonzo Church (1903–1995)</h3>
+    </section>
+
+    <!-- Lambda calculus is important in programming language theory, and the symbol λ has even been adopted as an unofficial symbol for the field.
+      It can be considered the smallest universal programming language: any computable function can be evaluated in the context of λ-calculus and
+      evaluating programs in the language consists of a single transformation rule: variable substitution. -->
+    <!-- Так лямбда-исчисление впервые громко заявило о себе, но ещё пару десятков лет продолжало быть достоянием математической логики.-->
+    <section class="slide flex middle">
+      <img class="center" src="pictures/scary_lambda_calculus.png" alt="" />
+      <h3 class="center">Lambda Calculus</h3>
+    </section>
+
+    <section class="slide flex middle">
+      <figure>
+        <blockquote>
+          <p class="center">
+            Возможно, у этой системы найдутся приложения не только в роли
+            логического исчисления.
+          </p>
+        </blockquote>
+        <figcaption>
+          Алонзо Чёрч, 1932
+        </figcaption>
+      </figure>
     </section>
 
     <section class="slide flex middle">
@@ -350,6 +404,14 @@
       <span class="center moderate">M==0 ? N1 : N2</span>
     </section>
 
+    <!-- McCarthy in the late 1950s defined the first versions of LISP, which uses Church's λ notation for functions.  Interestingly, by McCarthy's own account(1978), Lambda Calculus had little impact on the development of LISP other than the lambda notation.  -->
+    <!--  Nevertheless, LISP had many innovations which was influential on both theorectic and practical aspects of functional programming:
+
+    The use of garbage collection as a method of claiming unused cells (a funny story about the demonstration of the earlist garbage collector; see the appendix section).
+    Use closures to implement static scoping. For example, in "let x = 3 in f = λ y. x + y", function f is not closed since it has a free variable x. To use f, it has to be bound with an environment that tells the value of x. A function with the environment for its free variables is called a closure.
+    Invention of the conditional expression and its use for writing recursive functions. This has something to do with the evaluation order of expressions(see lazy evaluation).
+    Use higher-order operations on list such as the mapcar function. we will have say more about higher-order functions.
+    -->
     <!--Lisp was originally created as a practical mathematical notation for computer programs, influenced by the notation of Alonzo Church's lambda calculus. It quickly became the favored programming language for artificial intelligence (AI) research.-->
     <section class="slide flex middle">
       <img class="center" src="pictures/lisp-logo.png" alt="" />
@@ -362,6 +424,78 @@
     <section class="slide flex middle">
       <img class="center" src="pictures/mit-lisp-machine.jpg" alt="" />
       <h3 class="center">MIT Lisp machine</h3>
+    </section>
+
+    <!--  в середине 60-х Питер Ландин не отметил, что сложный язык программирования проще изучать, сформулировав его ядро в виде небольшого базового исчисления, выражающего самые существенные механизмы языка и дополненного набором удобных производных форм, поведение которых можно выразить путем перевода на язык базового исчисления. В качестве такой основы Ландин использовал лямбда-исчисление Чёрча. И всё заверте…-->
+    <section class="slide flex middle">
+      <img class="center" src="pictures/peter_landin.png" alt="" />
+      <h3 class="center">Peter Landin (1930 - 2009)</h3>
+    </section>
+
+    <section class="slide flex middle">
+      <img class="center" src="pictures/david_turner.jpg" alt="" />
+      <h3 class="center">David Turner (1946)</h3>
+    </section>
+
+    <!--  (1972) -->
+    <section class="slide flex middle">
+      <h3 class="center moderate bold">SASL</h3>
+    </section>
+
+    <!-- Although not implemented, it has proved very influential in the development of programming languages, especially functional programming languages -->
+    <!-- ISWIM is an imperative language with a functional core, consisting of a syntactic sugaring of lambda calculus to which are added mutable variables and assignment and a powerful control mechanism: the "program point" operator. Being based on lambda calculus ISWIM has higher order functions and lexically scoped variables.-->
+    <section class="slide flex middle">
+      <h3 class="center moderate bold">ISWIM</h3>
+    </section>
+
+    <!--  The language was widely taken up, both for research and for teaching, and had a strong influence on the subsequent development of the field, influencing in particular the design of Haskell, to which it has many similarities. -->
+    <section class="slide flex middle">
+      <img class="center" src="pictures/miranda_logo.jpg" alt="" />
+      <h3 class="center">Miranda (1983)</h3>
+    </section>
+
+    <section class="slide flex middle">
+      <img class="center" src="pictures/evolution_of_fpl.jpg" alt="" />
+      <h3 class="center">"Evolution" of FP languages</h3>
+    </section>
+
+    <section class="slide flex middle">
+      <img class="center" src="pictures/evolution_tree.jpg" alt="" />
+      <h3 class="center">Tree of Evolution</h3>
+    </section>
+
+    <!-- Following the release of Miranda by Research Software Ltd. in 1985, interest in lazy functional languages grew. By 1987, more than a dozen non-strict, purely functional programming languages existed. Miranda was the most widely used, but it was proprietary software. At the conference on Functional Programming Languages and Computer Architecture (FPCA '87) in Portland, Oregon, there was a strong consensus that a committee be formed to define an open standard for such languages. The committee's purpose was to consolidate existing functional languages into a common one to serve as a basis for future research in functional-language design.-->
+    <!-- Миранда был первым чистым функциональным языком, имевшим коммерческую поддержку, и был относительно популярен в 1980-х годах, но оставался собственническим программным обеспечением. Это затрудняло развитие и исследования возможностей ленивого функционального программирования, поэтому буквально за пару лет появилось более десятка схожих языков. Чтобы объединить усилия разных разработчиков в 1987 году на конференции по функциональным языкам программирования и компьютерной архитектуре в Орегоне (FPCA’87) было решено создать комитет для разработки открытого стандарта. -->
+    <section class="slide flex middle">
+      <img class="center" src="pictures/evolution_of_fpl.jpg" alt="" />
+      <h3 class="center">"Evolution" of FP languages</h3>
+    </section>
+
+    <!-- Собрался специальный комитет из отборнейших задротов и без лишнего шума создали его.-->
+    <section class="slide flex middle">
+      <img class="center" src="pictures/committee.jpg" alt="" />
+    </section>
+
+    <!-- Haskell — функциональный декларативный язык программирования, первая версия которого была стандартизирована в 1990 году, назван в честь математика Хаскелла Карри. Язык Haskell известен благодаря синтаксису, в сравнении с которым пёрл выглядит псевдокодом, а также необходимостью глубокого понимания лямбда-исчисления, замыканий, теории графов, теории категорий, сопромата, анатомии мозга и прочего матана даже для вывода на экран строки «Hello, World!» -->
+    <section class="slide flex middle white">
+      <img class="center" src="pictures/haskell_logo.svg" alt="" />
+    </section>
+
+    <section class="slide flex middle">
+      <img class="center" src="pictures/haskell_hello_world.jpg" alt="" />
+    </section>
+
+    <section class="slide flex middle">
+      <pre>
+        <code>main :: IO ()</code>
+        <code>main = putStrLn "Hello, world!"</code>
+      </pre>
+    </section>
+
+    <!-- В 1990 году была предложена первая версия языка, Haskell 1.0. -->
+    <!-- Отличительная черта языка — серьёзное отношение к типизации; во многом в связи с этим язык назван в честь исследователя теории типов и изобретателя комбинаторной логики Хаскелла Карри. -->
+    <section class="slide flex middle white">
+      <img class="center" src="pictures/haskell_logo.svg" alt="" />
     </section>
 
     <section class="slide flex middle">
