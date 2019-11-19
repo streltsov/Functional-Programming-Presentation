@@ -17,6 +17,12 @@ img {
   max-height: 100%;
 }
 
+.haskell {
+  background-image: url('pictures/haskell_logo.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
 .bold {
   font-weight: 600 !important;
 }

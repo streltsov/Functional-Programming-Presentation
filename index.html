@@ -38,7 +38,7 @@
     </section>
 
     <section class="slide flex middle">
-      <h2 class="center moderate">Paradigms</h2>
+      <h2 class="center moderate">Paradigm</h2>
     </section>
 
     <section class="slide flex middle">
@@ -70,7 +70,7 @@
     </section>
 
     <section class="slide flex middle">
-      <h3 class="center">Imperative programming</h3>
+      <h2 class="center moderate">Imperative programming</h2>
     </section>
 
     <!--The earliest imperative languages were the machine languages of the
@@ -79,14 +79,6 @@
 
     <section class="slide" id="picture">
       <img src="pictures/machine_lang.jpeg" />
-    </section>
-
-    <section class="slide flex middle">
-      <img class="center" src="pictures/konrad-zuse.jpeg" alt="" />
-    </section>
-
-    <section class="slide flex middle">
-      <h3 class="center">Plankalkül</h3>
     </section>
 
     <!-- В 1954 году Джон Бакуп из IBM, разработал первый язык высокого уровня,
@@ -99,18 +91,6 @@
 
     <section class="slide flex middle">
       <img class="center" src="pictures/fortran.jpeg" alt="" />
-    </section>
-
-    <section class="slide ">
-      <pre style="font-size: 16px"> <code> READ INPUT TAPE 5, 501, IA, IB,
-    IC</code> <code> 501 FORMAT (3I5)</code> <code> IF (IA) 777, 777, 701</code> <code> 701 IF (IB)
-    777, 777, 702</code> <code> 702 IF (IC) 777, 777, 703</code> <code> 703 IF (IA+IB-IC) 777, 777,
-    704</code> <code> 704 IF (IA+IC-IB) 777, 777, 705</code> <code> 705 IF (IB+IC-IA) 777, 777,
-    799</code> <code> 777 STOP 1</code> <code> 799 S = FLOATF (IA + IB + IC) / 2.0</code> <code>
-    AREA = SQRTF( S * (S - FLOATF(IA)) * (S - FLOATF(IB)) *</code> <code> + (S - FLOATF(IC)))</code>
-    <code> WRITE OUTPUT TAPE 6, 601, IA, IB, IC, AREA</code> <code> 601 FORMAT (4H A= ,I5,5H B=
-    ,I5,5H C= ,I5,8H AREA= ,F10.2,</code> <code> + 13H SQUARE UNITS)</code> <code> STOP</code>
-      <code> END</code> </pre>
     </section>
 
     <section class="slide flex middle">
@@ -134,14 +114,16 @@
     </section>
 
     <section class="slide flex middle">
-      <span class="center sub-moderate">I really hate this darn machine;</span>
-      <span class="center sub-moderate">I wish that they would sell it;</span>
-      <span class="center sub-moderate">It won’t do what I want it to,</span>
-      <span
-        class="center
-      sub-moderate"
-        >but only what I tell it.</span
+      <span class="center bold sub-moderate"
+        >I really hate this darn machine</span
       >
+      <span class="center bold sub-moderate"
+        >I wish that they would sell it</span
+      >
+      <span class="center bold sub-moderate"
+        >It won’t do what I want it to,</span
+      >
+      <span class="center bold sub-moderate">but only what I tell it.</span>
     </section>
 
     <!--Under the imperative programming paradigm, you program by giving the
@@ -149,21 +131,26 @@
       and in what exact order.-->
 
     <section class="slide flex middle">
-      <h3>Сходи в магазин</h3>
-      <pre> <code class="next" >Пройди
-    вперед 2 квартала</code> <code class="next" >Поверни налево</code> <code class="next" >Пройди
-    еще три квартала вперед</code> <code class="next" >Поверни направо</code> <code class="next">Найди
-														      здание
-														      с
-														      вывеской
-      "Магазин"</code> <code class="next" >Войди внутрь</code> </pre>
+      <pre>
+        <code class="next">Пройди вперед 2 квартала</code>
+	<code class="next">Поверни налево</code>
+	<code class="next">Пройди еще три квартала вперед</code>
+	<code class="next">Поверни направо</code>
+	<code class="next">Найди здание с вывеской "Магазин"</code>
+	<code class="next">Войди внутрь</code>
+      </pre>
     </section>
 
     <section class="slide flex middle">
-      <p>
+      <p class="center">
         <i>Императи́в</i> (лат. imperativus — повелительный,<br />
         от лат. impero — повелеваю)
       </p>
+    </section>
+
+    <section class="slide flex middle">
+      <img class="center fit" src="pictures/professor-fortran.png" alt="" />
+      <h3 class="center">Энциклопедия профессора Фортрана</h3>
     </section>
 
     <!--Программное управление. Программа состоит из последовательности машинных
@@ -205,42 +192,53 @@
       imperative paradigm was the only one efficient enough for widespread use until recently.-->
 
     <section class="slide flex middle">
-      <img src="pictures/Von_Neumann_Architecture.svg" alt="" />
-    </section>
-
-    <section class="slide flex middle">
       <img class="center" src="pictures/john_von_neumann.jpg" alt="" />
       <h3 class="center">John von Neumann (1908 - 1957)</h3>
     </section>
 
     <section class="slide flex middle">
       <h2 class="center sub-big"><i>«Как»</i></h2>
-      <h2 class="center no-margins">сделать</h2>
     </section>
 
     <section class="slide flex middle">
       <h3>1. Triple</h3>
-      <pre> <code>function triple(array)
-    {</code> <code>  let results = []</code> <code>  for (let i = 0; i < array.length; i++) {</code>
-      <code>    results.push(array[i] * 3)</code> <code>  }</code> <code>return results</code>
-      <code>} </code> </pre>
+      <pre>
+        <code>function triple(array) {</code>
+        <code>  let results = []</code>
+	<code>  for (let i = 0; i < array.length; i++) {</code>
+        <code>    results.push(array[i] * 3)</code>
+	<code>  }</code>
+	<code>  return results</code>
+        <code>}</code>
+      </pre>
     </section>
 
     <section class="slide flex middle">
       <h3>2. Filter by length</h3>
-      <pre> <code>function
-    filterByLength(array, length) {</code> <code>  let results = []</code> <code>  for (let i = 0; i
-    < array.length; i++) {</code> <code> if (array[i].length > length) {</code> <code>
-    results.push(array[i])</code> <code>    }</code> <code>  }</code> <code>return results</code>
-    <code>} </code> </pre>
+      <pre>
+        <code>function filterByLength(array, minLength) {</code>
+	<code>  let results = []</code>
+	<code>  for (let i = 0; i < array.length; i++) {</code>
+	<code>    if (array[i].length > minLength) {</code>
+	<code>      results.push(array[i])</code>
+	<code>    }</code>
+	<code>  }</code>
+	<code>  return results</code>
+        <code>} </code>
+      </pre>
     </section>
 
     <section class="slide flex middle">
       <h3>3. Multiply</h3>
-      <pre> <code>function multiply(array)
-    {</code> <code>  let results = 1;</code> <code>  for (let i = 0; i < array.length; i++) {</code>
-      <code>    results = results * array[i];</code> <code>  }</code> <code>return results</code>
-      <code>} </code> </pre>
+      <pre>
+        <code>function multiply(array) {</code>
+	<code>  let results = 1;</code>
+	<code>  for (let i = 0; i < array.length; i++) {</code>
+        <code>    results = results * array[i];</code>
+	<code>  }</code>
+	<code>  return results</code>
+        <code>}</code>
+      </pre>
     </section>
     <!--У ИП пошаговый подход к выполнению задачи. Разработчик разработчик пишет
       комманды которые в точности, от начала до конца описывают как выполнить задачу. Омманды
@@ -268,14 +266,8 @@
 	 опыта, и, как следствие, в идеях фон Неймана присутствовал заметный элемент случайности и
 	 субъективности, что, однако, не помешало последователям со временем канонизировать его
 	 теоретические взгляды, придать им статус непогрешимых догм. -->
-    <section
-      class="slide flex
-	 middle"
-    ></section>
 
-    <section class="slide flex middle">
-      <img class="center" src="pictures/john_backus.jpg" alt="" />
-    </section>
+    <section class="slide flex middle"></section>
 
     <!-- This is the style most people learn first: variables, assignments, and
       loops. A problem is solved by dividing its data into small bits (variables) that are updated
@@ -283,12 +275,12 @@
       repeating assignments over and over: a loop makes repetitions, and each repetition uses the
       same variables to start, perform, and conclude the work.
 
-	    Do we do everyday tasks this way? Really, no. This programming paradigm comes from the
-	    computer hardware --- imperative programming is really all about reading and resetting
-	    hardware registers. This style of programming arose when hardware people got tired of
-	    rewiring computer hardware for each and every task --- they developed imperative
-	    programming notation that represents the wiring diagrams (that is, flow charts --- they
-	    are wiring diagrams!). -->
+      Do we do everyday tasks this way? Really, no. This programming paradigm comes from the
+      computer hardware --- imperative programming is really all about reading and resetting
+      hardware registers. This style of programming arose when hardware people got tired of
+      rewiring computer hardware for each and every task --- they developed imperative
+      programming notation that represents the wiring diagrams (that is, flow charts --- they
+      are wiring diagrams!). -->
 
     <!-- Джон Бэкус — создатель Фортрана и очень известный человек. В 1977 году получил премию Тьюринга в области информатики.
       На вручении награды произнес речь «Можно ли освободить программирование от стиля фон Неймана?». В ней создатель Фортрана —
@@ -306,40 +298,121 @@
       />
     </section>
 
-    <!--Один из главных примеров в речи — код, который вычисляет скалярное произведение двух векторов.
-      Решение задачи можно найти циклом по классической фон-неймановской программе.
-      Здесь есть сумматор и аккумулятор — циклом перебираем значения и все комбинируем.-->
+    <!-- FP -->
+    <!-- Declarative programming is a way of specifying what a program should do, rather than specifying how to do it. -->
+
+    <!-- This statement does not indicate what the SQL system has to do in order to get the data. The SQL system can go through
+      each sales record and determine whether the condition is satisfied, or, it can quickly obtain the top few records from
+      presorted data. The statement only indicates the nature of the desired data.-->
 
     <section class="slide flex middle">
-      <pre class="sub-moderate">
-        <code>c := 0</code>
-        <code>for i := 1 step 1 until n do</code>
-        <code>    c := c + a[i]*b[i]</code>
-      </pre>
+      <h2 class="center moderate">Declarative programming</h2>
     </section>
-
-    <!--Решение этой же задачи можно найти функциональной программой. В качестве примера Джон показал код на выдуманном языке FP.-->
-    <!--Джон предложил использовать композицию функций — o, а функции, которые взаимодействуют между собой, писать декларативно.-->
-    <!--Два примера — классический и функциональный — выполняют одно и то же действие, но Бэкус считал, что правильнее писать во втором стиле.-->
 
     <section class="slide flex middle">
       <pre>
-        <code>Def DotP = (Insert +) o (ApplyToAll x) o Transpose</code>
+        <code>Пройди вперед 2 квартала</code>
+	<code>Поверни налево</code>
+	<code>Пройди еще три квартала вперед</code>
+	<code>Поверни направо</code>
+	<code>Найди здание с вывеской "Магазин"</code>
+	<code>Войди внутрь</code>
       </pre>
     </section>
 
-    <!--  Если значение переменной I не равно 0, то переходим по метке «40». -->
     <section class="slide flex middle">
-      <span> 10 IF (I.NE.0) GOTO 40</span>
-      <span> 20 STMT-1</span>
-      <span> 30 STMT-2</span>
-      <span> 40 STMT-3</span>
+      <pre>
+	<code>Сходи в магазин</code>
+      </pre>
     </section>
 
-    <!-- FP -->
+    <!-- Достаточно взглянуть на них, чтобы понять, что происходит.
+      Они декларативны, заявляя, что должно быть сделано, а не как. Вы описываете желаемый результат, не углубляясь в инструкции
+    Неважно, как будут выбраны пользователи из Мексики. Нам важен результат-->
+    <section class="slide flex middle">
+      <pre>
+	<code>SELECT * FROM Users WHERE Country=’Mexico’;</code>
+      </pre>
+    </section>
 
     <section class="slide flex middle">
-      <h3 class="center">Declarative programming</h3>
+      <img class="center" src="pictures/declarative_html.png" alt="" />
+    </section>
+
+    <section class="slide flex middle">
+      <h3>1. Triple</h3>
+      <pre>
+        <code>function triple(array) {</code>
+        <code>  let results = []</code>
+	<code>  for (let i = 0; i < array.length; i++) {</code>
+        <code>    results.push(array[i] * 3)</code>
+	<code>  }</code>
+	<code>  return results</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <h3>1. Triple</h3>
+      <pre>
+        <code>function triple(array) {</code>
+	<code>  return array.map(el => el * 3)</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <h3>2. Filter by length</h3>
+      <pre>
+        <code>function filterByLength(array, minLength) {</code>
+	<code>  let results = []</code>
+	<code>  for (let i = 0; i < array.length; i++) {</code>
+	<code>    if (array[i].length > minLength) {</code>
+	<code>      results.push(array[i])</code>
+	<code>    }</code>
+	<code>  }</code>
+	<code>  return results</code>
+        <code>} </code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <h3>2. Filter by length</h3>
+      <pre>
+        <code>function filterByLength(array, minLength) {</code>
+	<code>  return array.filter(el => el.length > minLength)</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <h3>3. Multiply</h3>
+      <pre>
+        <code>function multiply(array) {</code>
+	<code>  let results = 1;</code>
+	<code>  for (let i = 0; i < array.length; i++) {</code>
+        <code>    results = results * array[i];</code>
+	<code>  }</code>
+	<code>  return results</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <h3>3. Multiply</h3>
+      <pre>
+        <code>function multiply(array) {</code>
+	<code>  return array.reduce((el, acc) => el * acc)</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <h2 class="center sub-big"><i>«Что»</i></h2>
+    </section>
+
+    <section class="slide flex middle">
+      <h2 class="center moderate">Functional Programming</h2>
     </section>
 
     <!-- В 30-х годах прошлого века, немецкий математик Дэвид Гилберт сформулировал так называемую "Проблему разрешения" -->
@@ -498,6 +571,21 @@
       <img class="center" src="pictures/haskell_logo.svg" alt="" />
     </section>
 
+    <section class="slide flex middle haskell">
+      <ol>
+        <li class="next">Чистота языка</li>
+        <li class="next">Иммутабельность</li>
+        <li class="next">Функции высшего порядка</li>
+        <li class="next">Частичное применение</li>
+        <li class="next">Статическая сильная полная типизация</li>
+        <li class="next">Ленивые вычисления</li>
+        <li class="next">Алгебраические типы данных</li>
+        <li class="next">Параметрический полиморфизм</li>
+        <li class="next">Параметрический полиморфизм высших рангов</li>
+        <li class="next">...</li>
+      </ol>
+    </section>
+
     <section class="slide flex middle">
       <h2 class="center moderate">Lambda Calculus</h2>
     </section>
@@ -528,17 +616,17 @@
 
     <section class="slide flex middle">
       <p class="lambda center big">λx.x</p>
-      <p
-        class="js center
-    moderate"
-      >
-        x => x
-      </p>
+      <p class="js center moderate">x => x</p>
     </section>
 
     <section class="slide flex middle ">
-      <pre class="sub-moderate"> <code>x => x</code> <code>
-    </code> <code>function(x) {</code> <code> return x;</code> <code>}</code> </pre>
+      <pre class="sub-moderate">
+        <code>x => x</code>
+	<code> </code>
+	<code>function(x) {</code>
+	<code> return x;</code>
+        <code>}</code>
+      </pre>
     </section>
 
     <section class="slide flex middle">
