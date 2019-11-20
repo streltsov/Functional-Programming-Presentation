@@ -643,6 +643,138 @@
       <h2 class="center moderate">Pure Functions</h2>
     </section>
 
+    <section class="slide flex middle ">
+      <pre>
+      <code>let limit = 5;</code>
+      <code>let state = ['Some', 'properties', 'already', 'exists'];</code>
+      <code>let flag = true;</code>
+      <code>function changeState(object) {</code>
+      <code>  for(let property in object) {</code>
+      <code>    if(property.length < limit && flag == true) {</code>
+      <code>      state.push(property);</code>
+      <code>    }</code>
+      <code>  }</code>
+      <code>  flag = !flag;</code>
+      <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <h2 class="center big red">return</h2>
+    </section>
+
+    <section class="slide flex middle ">
+      <pre>
+      <code>function changeState(object) {</code>
+      <code>  for(let property in object) {</code>
+      <code>    if(property.length < limit && flag == true) {</code>
+      <code>      state.push(property);</code>
+      <code>    }</code>
+      <code>  }</code>
+      <code>  flag = !flag;</code>
+      <code>  return object;</code>
+      <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide">
+      <h2>Чистая функция:</h2>
+      <ol>
+        <li class="next">Принимает аргумент(ы)</li>
+        <li class="next">Не имеет побочных эффектов</li>
+        <li class="next">Возвращает значение</li>
+      </ol>
+    </section>
+
+    <!--In computer science, an operation, function or expression is said to have a side effect
+      if it modifies some state variable value(s) outside its local environment,
+      that is to say has an observable effect besides returning a value (the main effect)-->
+    <!-- Изменение внешнего состояния, запись в базу, запросы к серверу, операции ввода вывода и т.д. -->
+
+    <section class="slide flex middle ">
+      <pre class="sub-moderate">
+        <code>function max(first, second) {</code>
+	<code>  if(first > second) {</code>
+        <code>    return first;</code>
+	<code>  } else {</code>
+        <code>    return second;</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle ">
+      <pre class="sub-moderate">
+        <code>function isInThePast(day) {</code>
+	<code>  return new Date().getDate() < day</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle ">
+      <pre class="sub-moderate">
+        <code>function isBiggerThanFive(number) {</code>
+	<code>  return number > 5</code>
+        <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle ">
+      <pre class="sub-moderate">
+      <code>function addProperty(object) {</code>
+      <code>  object.theAnswer = 42;</code>
+      <code>  return object;</code>
+      <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle ">
+      <pre>
+      <code>let limit = 5;</code>
+      <code>let state = ['Some', 'properties', 'already', 'exists'];</code>
+      <code>let flag = true;</code>
+      <code>function changeState(object) {</code>
+      <code>  for(let property in object) {</code>
+      <code>    if(property.length < limit && flag == true) {</code>
+      <code>      state.push(property);</code>
+      <code>    }</code>
+      <code>  }</code>
+      <code>  flag = !flag;</code>
+      <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle ">
+      <pre>
+      <code>function changeState(object, state, limit, flag) {</code>
+      <code>  for(let property in object) {</code>
+      <code>    if(property.length < limit && flag == true) {</code>
+      <code>      state.push(property);</code>
+      <code>    }</code>
+      <code>  }</code>
+      <code>  return state;</code>
+      <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle ">
+      <pre>
+      <code>function createNewState(object, state, limit, flag) {</code>
+      <code>  const filtered = flag</code>
+      <code>    ? Object.keys(object).filter(key => key.length < limit)</code>
+      <code>    : []</code>
+      <code>  return [...state, ...filtered]</code>
+      <code>}</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <h2 class="center moderate">Immutability</h2>
+    </section>
+
+    <section class="slide flex middle">
+      <img class="center fit" src="pictures/immutable_x.jpg" alt="" />
+    </section>
+
     <section class="slide">
       <h2>Чего в FP нет:</h2>
       <ol>
