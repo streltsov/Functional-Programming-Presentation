@@ -37,6 +37,17 @@
       <h4 class="center pale">The Failure of State</h4>
     </section>
 
+    <!-- Taking that first step to understanding Functional Programming concepts is the most important and sometimes the most difficult step.
+      But it doesn’t have to be. Not with the right perspective. -->
+    <!-- Programming is thinking and Functional Programming will teach you to think very differently.
+	So much so, that you’ll probably never go back to the old way of thinking. -->
+    <!-- There are all kinds of things that you’re used to doing as a programmer that you cannot do any more with Functional Programming. -->
+    <!-- Just like in your car, you used to backup to get out of the driveway. But in a spaceship, there is no reverse. Now you may think, “WHAT? NO REVERSE?! HOW THE HELL AM I SUPPOSED TO DRIVE WITHOUT REVERSE?!”
+      Well, it turns out that you don’t need reverse in a spaceship because of its ability to maneuver in three dimensional space. Once you understand this, you’ll never miss reverse again. In fact, someday, you’ll think back at how limiting the car really was.-->
+    <section class="slide flex middle">
+      <img class="center" src="pictures/evolution_of_paradigms.png" alt="" />
+    </section>
+
     <section class="slide flex middle">
       <h2 class="center moderate">Paradigm</h2>
     </section>
@@ -773,6 +784,205 @@
 
     <section class="slide flex middle">
       <img class="center fit" src="pictures/immutable_x.jpg" alt="" />
+    </section>
+
+    <!-- Do you remember when you first saw the following bit of code:-->
+    <!--And whoever was teaching you told you to forget what you learned in math class? In math, x can never be equal to x + 1.
+      But in Imperative Programming, it means, take the current value of x add 1 to it and put that result back into x.
+      Well, in functional programming, x = x + 1 is illegal. So you have to remember what you forgot in math… Sort of.-->
+    <!-- присваевание не равно сравнение -->
+    <section class="slide flex middle">
+      <pre class="sub-moderate">
+        <code>let x = 1;</code>
+        <code>x = x + 1</code>
+      </pre>
+    </section>
+
+    <!--Stored values are still called variables because of history but they are constants,
+      i.e. once x takes on a value, it’s that value for life.-->
+    <section class="slide flex middle forbidden">
+      <pre class="sub-moderate">
+        <code>let x = 1;</code>
+        <code>x = x + 1</code>
+      </pre>
+    </section>
+
+    <section class="slide flex">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+      </pre>
+    </section>
+
+    <section class="slide flex">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+	<code>numbers.push(108);</code>
+      </pre>
+    </section>
+
+    <section class="slide flex">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+	<code><strike>numbers.push(108);</strike></code>
+      </pre>
+    </section>
+
+    <section class="slide flex">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+	<code><strike>numbers.push(108);</strike></code>
+        <code>numbers[2] = 20;</code>
+      </pre>
+    </section>
+
+    <section class="slide flex">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+	<code><strike>numbers.push(108);</strike></code>
+	<code><strike>numbers[2] = 20;</strike></code>
+      </pre>
+    </section>
+
+    <section class="slide flex">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+	<code><strike>numbers.push(108);</strike></code>
+	<code><strike>numbers[2] = 20;</strike></code>
+	<code>numbers.pop();</code>
+      </pre>
+    </section>
+
+    <section class="slide flex">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+	<code><strike>numbers.push(108);</strike></code>
+	<code><strike>numbers[2] = 20;</strike></code>
+	<code><strike>numbers.pop();</strike></code>
+      </pre>
+    </section>
+
+    <section class="slide flex">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+	<code><strike>numbers.push(108);</strike></code>
+	<code><strike>numbers[2] = 20;</strike></code>
+	<code><strike>numbers.pop();</strike></code>
+	<code>numbers.unshift();</code>
+      </pre>
+    </section>
+
+    <section class="slide flex">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+	<code><strike>numbers.push(108);</strike></code>
+	<code><strike>numbers[2] = 20;</strike></code>
+	<code><strike>numbers.pop();</strike></code>
+	<code><strike>numbers.unshift();</strike></code>
+      </pre>
+    </section>
+
+    <section class="slide flex">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+	<code><strike>numbers.push(108);</strike></code>
+	<code><strike>numbers[2] = 20;</strike></code>
+	<code><strike>numbers.pop();</strike></code>
+	<code><strike>numbers.unshift();</strike></code>
+	<code>numbers.shift(1);</code>
+      </pre>
+    </section>
+
+    <section class="slide flex">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+	<code><strike>numbers.push(108);</strike></code>
+	<code><strike>numbers[2] = 20;</strike></code>
+	<code><strike>numbers.pop();</strike></code>
+	<code><strike>numbers.unshift();</strike></code>
+	<code><strike>numbers.shift(1);</strike></code>
+	<code>numbers.splice(0, 0, 1);</code>
+      </pre>
+    </section>
+
+    <section class="slide flex">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+	<code><strike>numbers.push(108);</strike></code>
+	<code><strike>numbers[2] = 20;</strike></code>
+	<code><strike>numbers.pop();</strike></code>
+	<code><strike>numbers.unshift();</strike></code>
+	<code><strike>numbers.shift(1);</strike></code>
+	<code><strike>numbers.splice(0, 0, 1);</strike></code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <ol class="sub-moderate">
+        <li class="next">Какие преимущества у иммутабельности?</li>
+        <li class="next">Как программировать без переменных?</li>
+      </ol>
+    </section>
+
+    <section class="slide flex middle">
+      <h3>Features of Immutability</h3>
+      <ol class="sub-moderate">
+        <li class="next">Easiness to reason about</li>
+        <li class="next">Mutithreading</li>
+      </ol>
+    </section>
+
+    <section class="slide flex middle">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+        <code>let newNumbers = [...numbers, 108];</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+        <code>let newNumbers = numbers.slice(1);</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+        <code>let newNumbers = numbers.slice(0, numbers.length - 1);</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+        <code>let newNumbers = tail numbers;</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+        <code>let newNumbers = init numbers;</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <pre class="sub-moderate">
+        <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
+        <code>let newNumbers = numbers ++ [108];</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <h2 class="center moderate">
+        <i>Immutability creates simpler and safer code.</i>
+      </h2>
     </section>
 
     <section class="slide">
