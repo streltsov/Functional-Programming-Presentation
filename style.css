@@ -53,6 +53,9 @@ img {
   margin: 0 !important;
 }
 
+.js {
+  font-size: 70px !important;
+}
 .js,
 code {
   font-family: 'Inconsolata', monospace !important;

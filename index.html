@@ -917,18 +917,9 @@
     </section>
 
     <section class="slide flex middle">
-      <ol class="sub-moderate">
-        <li class="next">Какие преимущества у иммутабельности?</li>
-        <li class="next">Как программировать без переменных?</li>
-      </ol>
-    </section>
-
-    <section class="slide flex middle">
-      <h3>Features of Immutability</h3>
-      <ol class="sub-moderate">
-        <li class="next">Easiness to reason about</li>
-        <li class="next">Mutithreading</li>
-      </ol>
+      <h3 class="center sub-moderate bold">
+        Как программировать без переменных?
+      </h3>
     </section>
 
     <section class="slide flex middle">
@@ -980,9 +971,104 @@
     </section>
 
     <section class="slide flex middle">
+      <h3>Features of Immutability</h3>
+      <ol class="sub-moderate">
+        <li class="next">Easiness to reason about</li>
+        <li class="next">Mutithreading</li>
+      </ol>
+    </section>
+
+    <section class="slide flex middle">
       <h2 class="center moderate">
         <i>Immutability creates simpler and safer code.</i>
       </h2>
+    </section>
+
+    <section class="slide flex middle">
+      <h2 class="center moderate">First-class functions</h2>
+    </section>
+
+    <section class="slide flex middle">
+      <h2 class="center moderate">First-class citizen</h2>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λ</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λx.x</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="js center moderate">x => x</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="js center moderate">(x, y) => x * y</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λxy.xy</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λx.λy.xy</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big"><span class="glow">λx</span>.λy.xy</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λx.<span class="glow">λy.xy</span></p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λx.<span class="glow">λy</span>.xy</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λx.λy.<span class="glow">xy</span></p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λx.λy.xy</p>
+      <p class="js center moderate">
+        x => y => x * y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big"><span class="glow">λx</span>.λy.xy</p>
+      <p class="js center moderate">
+        <span class="glow">x</span> => y => x * y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λx.<span class="glow">λy.xy</span></p>
+      <p class="js center moderate">
+        x => <span class="glow">y => x * y</span>
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λx.<span class="glow">λy</span>.xy</p>
+      <p class="js center moderate">
+        x => <span class="glow">y</span> => x * y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λx.λy.<span class="glow">xy</span></p>
+      <p class="js center moderate">
+        x => y => <span class="glow">x * y</span>
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <h2 class="center moderate">Currying</h2>
     </section>
 
     <section class="slide">
