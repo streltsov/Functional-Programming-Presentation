@@ -984,12 +984,141 @@
       </h2>
     </section>
 
+    <!-- First-class functions -->
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λ</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λx.x</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">(λx.x)(λx.x)</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">(λx.x)</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λx.x</p>
+    </section>
+
     <section class="slide flex middle">
       <h2 class="center moderate">First-class functions</h2>
     </section>
 
     <section class="slide flex middle">
-      <h2 class="center moderate">First-class citizen</h2>
+      <i class="sub-moderate">
+        В информатике язык программирования имеет функции первого класса, если
+        он рассматривает функции как<br />
+        <strong>объекты первого класса</strong>
+      </i>
+    </section>
+
+    <section class="slide flex middle">
+      <i class="sub-moderate center">
+        <strong>Объекты первого класса?</strong>
+      </i>
+    </section>
+
+    <!-- Понятие объектов первого и второго классов было предложено в 1967 г. Кристофером Стрэчи в
+      статье «Understanding Programming Languages», где процедуры языка Алгол, в противоположность 
+      действительным числам, он сравнил с подвергающимися социальной дискриминации «людьми второго сорта» (англ. second-class citizens) -->
+    <section class="slide flex middle">
+      <i class="sub-moderate">
+        <strong>Обьектами первого класса</strong> называются элементы, которые
+        могут быть переданы как параметр, возвращены из функции, присвоены
+        переменной.
+      </i>
+    </section>
+
+    <section class="slide">
+      <h3>Объект называют «объектом первого класса», если он:</h3>
+      <ol>
+        <li class="next">
+          может быть сохранен в переменной или структурах данных;
+        </li>
+        <li class="next">
+          может быть передан в функцию как аргумент;
+        </li>
+        <li class="next">
+          может быть возвращен из функции как результат;
+        </li>
+        <li class="next">
+          может быть создан во время выполнения программы;
+        </li>
+        <li class="next">
+          внутренне самоопознаваем (независим от именования).
+        </li>
+      </ol>
+    </section>
+
+    <section class="slide flex middle">
+      <i class="sub-moderate">
+        В информатике язык программирования имеет
+        <strong>функции первого класса</strong>, если он рассматривает функции
+        как<br />
+        объекты первого класса
+      </i>
+    </section>
+
+    <section class="slide">
+      <h3>Функции первого класса, это те функции которые:</h3>
+      <ol>
+        <li class="next">
+          можно сохранить в переменной или структурах данных;
+        </li>
+        <li class="next">
+          можно передать в функцию как аргумент;
+        </li>
+        <li class="next">
+          можно вернуть из функции как результат;
+        </li>
+        <li class="next">
+          можно создать во время выполнения программы;
+        </li>
+        <li class="next">
+          внутренне самоопознаваемы (независимы от именования).
+        </li>
+      </ol>
+    </section>
+
+    <section class="slide">
+      <h3>Функции первого класса, это те функции которые:</h3>
+      <ol>
+        <li class="hide">
+          можно сохранить в переменной или структурах данных;
+        </li>
+        <li>
+          можно передать в функцию как аргумент;
+        </li>
+        <li>
+          можно вернуть из функции как результат;
+        </li>
+        <li class="hide">
+          можно создать во время выполнения программы;
+        </li>
+        <li class="hide">
+          внутренне самоопознаваемы (независимы от именования).
+        </li>
+      </ol>
+    </section>
+
+    <section class="slide flex middle">
+      <h2 class="center moderate">
+        Higher order functions
+      </h2>
+    </section>
+
+    <section class="slide flex middle">
+      <i class="sub-moderate">
+        <strong>Функция высшего порядка</strong> -- это функция принимающая в
+        качестве аргументов другие функции или возвращающая другую функцию в
+        качестве результата.
+      </i>
     </section>
 
     <section class="slide flex middle">
@@ -1034,6 +1163,10 @@
 
     <section class="slide flex middle">
       <p class="lambda center big">λx.λy.xy</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">λx.λy.xy</p>
       <p class="js center moderate">
         x => y => x * y
       </p>
@@ -1068,30 +1201,92 @@
     </section>
 
     <section class="slide flex middle">
+      <p class="lambda center big">
+        λx.λy.λz.xyz
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub-sub-moderate">
+        (λx.λy.λz.xyz) 3 4 5
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub-sub-moderate">
+        (λy.λz.3yz) 4 5
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub-sub-moderate">
+        (λz.34z) 5
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub-sub-moderate">
+        345
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub-sub-moderate">
+        60
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center big">
+        λx.λy.λz.xyz
+      </p>
+    </section>
+
+    <section class="slide flex middle">
       <h2 class="center moderate">Currying</h2>
     </section>
 
-    <section class="slide">
-      <h2>Чего в FP нет:</h2>
-      <ol>
-        <li class="next">Переменных</li>
-        <li class="next">Циклов</li>
-        <li class="next">Ветвлений</li>
-      </ol>
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        const sum = (x, y) => x + y;
+      </p>
     </section>
 
-    <section class="slide">
-      <h2>Что в FP есть:</h2>
-      <ol>
-        <li class="next">Чистые функции</li>
-        <li class="next">Иммутабельность</li>
-        <li class="next">Каррирование</li>
-        <li class="next">Композиция функций</li>
-        <li class="next">Функции первого класса</li>
-        <li class="next">Функции высшего порядка</li>
-        <li class="next">Рекурсия</li>
-        <li class="next">Замыкания</li>
-      </ol>
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        const sum = (x, y) => x + y;
+      </p>
+      <p class="lambda center sub3-moderate">
+        const addFive = x => sum(x, 5);
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        const sum = (x, y) => x + y;
+      </p>
+      <p class="lambda center sub3-moderate">
+        const addFive = x => sum(x, 5);
+      </p>
+      <p class="lambda center sub3-moderate">
+        const addFive = x => x + 5;
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center ">
+        export default connect(mapStateToProps)(TodoApp)
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <pre>
+    <code> renderHtmlTag = tagName =></code>
+    <code>   content => `<${tagName}>${content}<${tagName}>`</code>
+    <code> </code>
+    <code> renderDiv = renderHtmlTag('div')</code>
+    <code> renderH1 = renderHtmlTag('h1')</code>
+    </pre>
     </section>
 
     <section class="slide">

@@ -12,6 +12,10 @@
   color: #fafafa;
 }
 
+.hide {
+  color: #212121 !important;
+}
+
 .forbidden {
   background-image: url('pictures/forbidden_sign.png');
   background-size: contain;
@@ -79,6 +83,14 @@ code {
 }
 .space-around {
   justify-content: space-around;
+}
+.sub3-moderate {
+  font-size: 66px;
+  font-weight: 400;
+}
+.sub-sub-moderate {
+  font-size: 111px;
+  font-weight: 400;
 }
 .sub-moderate {
   font-size: 40px;
