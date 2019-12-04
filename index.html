@@ -1242,6 +1242,8 @@
       </p>
     </section>
 
+    <!-- currying is translating a function that takes multiple arguments
+      into a sequence of functions, each accepting one argument. -->
     <section class="slide flex middle">
       <h2 class="center moderate">Currying</h2>
     </section>
@@ -1249,6 +1251,120 @@
     <section class="slide flex middle">
       <p class="lambda center sub3-moderate">
         const sum = (x, y) => x + y;
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        const sum = (x, y) => x + y;
+      </p>
+      <p class="lambda center sub3-moderate">
+        sum(4, 8);
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        const sum = x => y => x + y;
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        const sum = x => y => x + y;
+      </p>
+      <p class="lambda center sub3-moderate">
+        sum(4)(8);
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum x y = x + y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        map (sum 5) [1, 2, 3]
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        [1, 2, 3].map( sum(5) )
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        TypeError: sum(...) is not a function
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum x = \y -> x + y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        \y -> 5 + y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        map (sum 5) [1, 2, 3]
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        map (\y -> 5 + y) [1, 2, 3]
+      </p>
+    </section>
+
+    <!-- Composition -->
+    <section class="slide flex middle">
+      <h2 class="center moderate">Composition</h2>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        ["1", "2", "3"].map( parseInt );
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        ["1", "2", "3"].map( parseInt );
+      </p>
+      <p class="lambda center sub3-moderate">
+        [1, NaN, NaN]
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        fn => arg => fn(arg)
+      </p>
+    </section>
+
+    /* Partial Application */
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        const sum = x => y => x + y;
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        const sum = x => y => x + y;
+      </p>
+      <p class="lambda center sub3-moderate">
+        sum(4)(8);
       </p>
     </section>
 
