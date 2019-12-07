@@ -1242,15 +1242,138 @@
       </p>
     </section>
 
-    <!-- currying is translating a function that takes multiple arguments
-      into a sequence of functions, each accepting one argument. -->
+    <!-- A curried function is a function that takes multiple arguments one at a time.
+	Given a function with 3 parameters, the curried version will take one argument and
+	return a function that takes the next argument, which returns a function that takes the third argument.
+	The last function returns the result of applying the function to all of its arguments. -->
     <section class="slide flex middle">
       <h2 class="center moderate">Currying</h2>
     </section>
 
     <section class="slide flex middle">
+      <p>
+        <strong>Каррирование</strong> (от англ. currying, иногда — карринг) —
+        преобразование функции от многих аргументов в набор функций, каждая из
+        которых является функцией от одного аргумента.
+      </p>
+    </section>
+
+    <!--FIRST TELL ABOUT HASKELL!!! -->
+
+    <section class="slide flex middle">
       <p class="lambda center sub3-moderate">
         const sum = (x, y) => x + y;
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        [1, 2, 3].map( sum(5) )
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum x y = x + y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        map (sum 5) [1, 2, 3]
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum x y = x + y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum x y = x + y
+      </p>
+      <p class="lambda center sub3-moderate">
+        λxy.x + y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum x y = x + y
+      </p>
+      <p class="lambda center sub3-moderate">
+        λx.λy.x + y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum x y = x + y
+      </p>
+      <p class="lambda center sub3-moderate">
+        <span class="glow">λx</span>.λy.x + y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum x y = x + y
+      </p>
+      <p class="lambda center sub3-moderate">
+        λx.<span class="glow">λy.x + y</span>
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum = \x -> \y -> x + y
+      </p>
+      <p class="lambda center sub3-moderate">
+        λx.λy.x + y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum = <span class="glow">\x</span> -> \y -> x + y
+      </p>
+      <p class="lambda center sub3-moderate">
+        <span class="glow">λx</span>.λy.x + y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum = \x -> <span class="glow">\y -> x + y</span>
+      </p>
+      <p class="lambda center sub3-moderate">
+        λx.<span class="glow">λy.x + y</span>
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        map (sum 5) [1, 2, 3]
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum = \x -> <span class="glow">\y -> x + y</span>
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        \y -> 5 + y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        \y -> 5 + y
       </p>
     </section>
 
@@ -1269,48 +1392,23 @@
       </p>
     </section>
 
+    <!--Each argument is taken one at a time. If the function had more parameters,
+      it could simply continue to return new functions until all of the arguments
+      are supplied and the application can be completed.-->
+    <!-- The parentheses in the example above represent function invocations: add is invoked with 2,
+	which returns a partially applied function with a fixed to 2. Instead of assigning the return value
+	to a variable or otherwise using it, we immediately invoke the returned function by passing 3 to it
+	in parentheses, which completes the application and returns 5.
+      -->
+    <!--A partial application is a function which has been applied to some, but not yet all of its arguments.
+	In other words, it’s a function which has some arguments fixed inside its closure scope.
+	A function with some of its parameters fixed is said to be partially applied.-->
     <section class="slide flex middle">
       <p class="lambda center sub3-moderate">
         const sum = x => y => x + y;
       </p>
       <p class="lambda center sub3-moderate">
         sum(4)(8);
-      </p>
-    </section>
-
-    <section class="slide flex middle">
-      <p class="lambda center sub3-moderate">
-        sum x y = x + y
-      </p>
-    </section>
-
-    <section class="slide flex middle">
-      <p class="lambda center sub3-moderate">
-        map (sum 5) [1, 2, 3]
-      </p>
-    </section>
-
-    <section class="slide flex middle">
-      <p class="lambda center sub3-moderate">
-        [1, 2, 3].map( sum(5) )
-      </p>
-    </section>
-
-    <section class="slide flex middle">
-      <p class="lambda center sub3-moderate">
-        TypeError: sum(...) is not a function
-      </p>
-    </section>
-
-    <section class="slide flex middle">
-      <p class="lambda center sub3-moderate">
-        sum x = \y -> x + y
-      </p>
-    </section>
-
-    <section class="slide flex middle">
-      <p class="lambda center sub3-moderate">
-        \y -> 5 + y
       </p>
     </section>
 
@@ -1331,6 +1429,29 @@
       <h2 class="center moderate">Composition</h2>
     </section>
 
+    <!--It’s a technique to create new functions using existing functions.-->
+    <section class="slide flex middle">
+      <img class="center" src="pictures/composition.jpeg" alt="" />
+    </section>
+
+    <section class="slide flex middle">
+      <p>
+        <strong>Компози́ция</strong> (лат. compositio — составление, связывание,
+        сложение, соединение) — составление целого из частей.
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p>
+        <strong>Компози́ция фу́нкций</strong> (или суперпози́ция фу́нкций) — это
+        применение одной функции к результату другой.
+      </p>
+    </section>
+
+    <!--A key to function composition is having functions that are composable.
+      A composable function should have 1 input argument and 1 output value.-->
+
+    <!-- The power of function composition is realized as your codebase grows, allowing you to create numerous compositions. -->
     <section class="slide flex middle">
       <p class="lambda center sub3-moderate">
         ["1", "2", "3"].map( parseInt );
