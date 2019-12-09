@@ -23,12 +23,7 @@ Haskell base: id 2 == 2
 
 Mockingbird M := λf.ff;
 f = f(f)
-
 What is M(I) ?
-What about M(M) ?
-Yeah, StackOverflow.
-M(M) == M(M) == M(M)
-It calls Omega Combinator.
 
 Kestrel K := λab.a;
 K = a => b => a
@@ -37,6 +32,8 @@ What is K(I)(M) ?
 What is K(K)(M) ?
 
 Haskell base: const 7 2 == 7
+
+Partial Application
 Why const?
 K5 = K(5);
 K5(3) == 5;
@@ -95,6 +92,10 @@ C(K)(I)(M) == M
 KI I M = M
 KI(I)(M) == M
 
-Haskell base: flip const 1 8 == 8
+Recursion:
 
-Eveerything can be functions
+What about M(M) ?
+Yeah, StackOverflow.
+M(M) == M(M) == M(M)
+It calls Omega Combinator.
+

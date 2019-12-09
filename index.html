@@ -8,22 +8,22 @@
     <link rel="stylesheet" href="style.css" />
 
     <link
-      href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
-      href="https://fonts.googleapis.com/css?family=Charm&display=swap"
-      rel="stylesheet"
-    />
-
-    <link
       href="https://fonts.googleapis.com/css?family=News+Cycle&display=swap"
       rel="stylesheet"
     />
 
     <link
       href="https://fonts.googleapis.com/css?family=Alegreya+Sans:100,100i,300,300i,400,400i,500,500i,700,700i,800,800i,900,900i&display=swap&subset=greek"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Inconsolata&display=swap"
+      rel="stylesheet"
+    />
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Charm&display=swap"
       rel="stylesheet"
     />
   </head>
@@ -66,16 +66,6 @@
       </p>
     </section>
 
-    <!--One very common way people classify languages is to organize them into
-      paradigms. You can think of a paradigm as a group of languages that share similar
-      characteristics. There are many paradigms currently in use: procedural, functional, and
-      object-oriented.  Many of these terms are often misused or confused; there’s also some degree
-      of overlap between different paradigms, which definitely doesn’t make things easier.-->
-
-    <!--Существует два основных способа программирования. Первый и по
-      историческим причинам самый распространенный, способ при котором программист дает компьютеру
-      последовательность инструкций для того чтобы тот вел себя определенным образом.-->
-
     <section class="slide no-paddings">
       <img src="pictures/programming_paradigms.jpg" />
     </section>
@@ -90,6 +80,12 @@
 
     <section class="slide" id="picture">
       <img src="pictures/machine_lang.jpeg" />
+    </section>
+
+    <section class="slide flex middle">
+      <pre>
+        <code>BB 11 01 B9 0D 00 B4 0E 8A 07 43 CD 10 E2 F9 CD 20 48 65 6C 6C 6F 2C 20 57 6F 72 6C 64 21</code>
+      </pre>
     </section>
 
     <!-- В 1954 году Джон Бакуп из IBM, разработал первый язык высокого уровня,
@@ -426,29 +422,33 @@
       <h2 class="center moderate">Functional Programming</h2>
     </section>
 
-    <!-- В 30-х годах прошлого века, немецкий математик Дэвид Гилберт сформулировал так называемую "Проблему разрешения" -->
     <section class="slide flex middle">
       <img class="center fit" src="pictures/david_hilbert.jpg" alt="" />
       <h3 class="center">David Hilbert (1862–1943)</h3>
     </section>
 
-    <!-- Суть её в том, что вот есть у нас некий формальный язык, на котором можно написать какое-либо утверждение.
-      Существует ли алгоритм, за конечное число шагов определяющий его истинность или ложность? -->
     <section class="slide flex middle">
       <h3 class="center moderate bold">Entscheidungsproblem</h3>
     </section>
 
-    <!--Ответ был найден великим учёными того времени Аланом Тьюрингом. -->
+    <section class="slide flex middle">
+      <img class="center fit" src="pictures/fake_turing.jpg" alt="" />
+      <h3 class="center">Alan Turing (1912–1954)</h3>
+    </section>
+
     <section class="slide flex middle">
       <img class="center fit" src="pictures/alan_turing.jpg" alt="" />
       <h3 class="center">Alan Turing (1912–1954)</h3>
     </section>
 
-    <!-- С помощью абстрактной вычислительной машины (машины Тьюринга),
-	он показал, что для арифметики такого алгоритма не существует в принципе, т.е. Entscheidungsproblem в общем случае неразрешима. -->
     <section class="slide flex middle">
       <img class="center fit" src="pictures/turing_machine.jpg" alt="" />
       <h3 class="center">An implementation of a Turing machine</h3>
+    </section>
+
+    <section class="slide flex middle">
+      <img class="center fit" src="pictures/happy_turing.jpg" alt="" />
+      <h3 class="center">Alan Turing (1912–1954)</h3>
     </section>
 
     <section class="slide flex middle">
@@ -456,10 +456,6 @@
       <h3 class="center">Alonzo Church (1903–1995)</h3>
     </section>
 
-    <!-- Lambda calculus is important in programming language theory, and the symbol λ has even been adopted as an unofficial symbol for the field.
-      It can be considered the smallest universal programming language: any computable function can be evaluated in the context of λ-calculus and
-      evaluating programs in the language consists of a single transformation rule: variable substitution. -->
-    <!-- Так лямбда-исчисление впервые громко заявило о себе, но ещё пару десятков лет продолжало быть достоянием математической логики.-->
     <section class="slide flex middle">
       <img class="center" src="pictures/scary_lambda_calculus.png" alt="" />
       <h3 class="center">Lambda Calculus</h3>
@@ -510,10 +506,13 @@
       <h3 class="center">MIT Lisp machine</h3>
     </section>
 
-    <!--  в середине 60-х Питер Ландин не отметил, что сложный язык программирования проще изучать, сформулировав его ядро в виде небольшого базового исчисления, выражающего самые существенные механизмы языка и дополненного набором удобных производных форм, поведение которых можно выразить путем перевода на язык базового исчисления. В качестве такой основы Ландин использовал лямбда-исчисление Чёрча. И всё заверте…-->
     <section class="slide flex middle">
       <img class="center" src="pictures/peter_landin.png" alt="" />
       <h3 class="center">Peter Landin (1930 - 2009)</h3>
+    </section>
+
+    <section class="slide flex middle">
+      <h3 class="center moderate bold">ISWIM</h3>
     </section>
 
     <section class="slide flex middle">
@@ -521,46 +520,31 @@
       <h3 class="center">David Turner (1946)</h3>
     </section>
 
-    <!--  (1972) -->
     <section class="slide flex middle">
       <h3 class="center moderate bold">SASL</h3>
     </section>
 
-    <!-- Although not implemented, it has proved very influential in the development of programming languages, especially functional programming languages -->
-    <!-- ISWIM is an imperative language with a functional core, consisting of a syntactic sugaring of lambda calculus to which are added mutable variables and assignment and a powerful control mechanism: the "program point" operator. Being based on lambda calculus ISWIM has higher order functions and lexically scoped variables.-->
     <section class="slide flex middle">
-      <h3 class="center moderate bold">ISWIM</h3>
-    </section>
-
-    <!--  The language was widely taken up, both for research and for teaching, and had a strong influence on the subsequent development of the field, influencing in particular the design of Haskell, to which it has many similarities. -->
-    <section class="slide flex middle">
-      <img class="center" src="pictures/miranda_logo.jpg" alt="" />
-      <h3 class="center">Miranda (1983)</h3>
+      <h3 class="center moderate bold">KRC</h3>
     </section>
 
     <section class="slide flex middle">
-      <img class="center" src="pictures/evolution_of_fpl.jpg" alt="" />
-      <h3 class="center">"Evolution" of FP languages</h3>
+      <h3 class="center moderate bold">Miranda</h3>
     </section>
 
     <section class="slide flex middle">
-      <img class="center" src="pictures/evolution_tree.jpg" alt="" />
-      <h3 class="center">Tree of Evolution</h3>
+      <img class="center" src="pictures/four_nerds.jpg" alt="" />
     </section>
 
-    <!-- Following the release of Miranda by Research Software Ltd. in 1985, interest in lazy functional languages grew. By 1987, more than a dozen non-strict, purely functional programming languages existed. Miranda was the most widely used, but it was proprietary software. At the conference on Functional Programming Languages and Computer Architecture (FPCA '87) in Portland, Oregon, there was a strong consensus that a committee be formed to define an open standard for such languages. The committee's purpose was to consolidate existing functional languages into a common one to serve as a basis for future research in functional-language design.-->
-    <!-- Миранда был первым чистым функциональным языком, имевшим коммерческую поддержку, и был относительно популярен в 1980-х годах, но оставался собственническим программным обеспечением. Это затрудняло развитие и исследования возможностей ленивого функционального программирования, поэтому буквально за пару лет появилось более десятка схожих языков. Чтобы объединить усилия разных разработчиков в 1987 году на конференции по функциональным языкам программирования и компьютерной архитектуре в Орегоне (FPCA’87) было решено создать комитет для разработки открытого стандарта. -->
+    <section class="slide flex middle white">
+      <img class="center" src="pictures/haskell_logo.svg" alt="" />
+    </section>
+
     <section class="slide flex middle">
-      <img class="center" src="pictures/evolution_of_fpl.jpg" alt="" />
-      <h3 class="center">"Evolution" of FP languages</h3>
+      <img class="center" src="pictures/haskell_curry.jpg" alt="" />
+      <h3 class="center">Haskell Curry (1900 - 1982)</h3>
     </section>
 
-    <!-- Собрался специальный комитет из отборнейших задротов и без лишнего шума создали его.-->
-    <section class="slide flex middle">
-      <img class="center" src="pictures/committee.jpg" alt="" />
-    </section>
-
-    <!-- Haskell — функциональный декларативный язык программирования, первая версия которого была стандартизирована в 1990 году, назван в честь математика Хаскелла Карри. Язык Haskell известен благодаря синтаксису, в сравнении с которым пёрл выглядит псевдокодом, а также необходимостью глубокого понимания лямбда-исчисления, замыканий, теории графов, теории категорий, сопромата, анатомии мозга и прочего матана даже для вывода на экран строки «Hello, World!» -->
     <section class="slide flex middle white">
       <img class="center" src="pictures/haskell_logo.svg" alt="" />
     </section>
@@ -576,10 +560,38 @@
       </pre>
     </section>
 
-    <!-- В 1990 году была предложена первая версия языка, Haskell 1.0. -->
-    <!-- Отличительная черта языка — серьёзное отношение к типизации; во многом в связи с этим язык назван в честь исследователя теории типов и изобретателя комбинаторной логики Хаскелла Карри. -->
-    <section class="slide flex middle white">
-      <img class="center" src="pictures/haskell_logo.svg" alt="" />
+    <section class="slide flex middle">
+      <pre>
+        <code>factorial :: Integer -> Integer</code>
+        <code>factorial 0 = 1</code>
+        <code>factorial n = n * factorial (n-1)</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <pre>
+	<code>factorial n = if n > 1 then n * factorial (n-1) else 1</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <pre>
+	<code>factorial n = product [1..n]</code>
+      </pre>
+    </section>
+
+    <section class="slide flex middle">
+      <pre>
+        <code>calc :: String -> [Float]</code>
+        <code>calc = foldl f [] . words</code>
+        <code>  where</code>
+        <code>    f (x:y:zs) "+" = (y + x):zs</code>
+        <code>    f (x:y:zs) "-" = (y - x):zs</code>
+        <code>    f (x:y:zs) "*" = (y * x):zs</code>
+        <code>    f (x:y:zs) "/" = (y / x):zs</code>
+        <code>    f (x:y:zs) "FLIP" =  y:x:zs</code>
+        <code>    f xs y = read y : xs</code>
+      </pre>
     </section>
 
     <section class="slide flex middle haskell">
@@ -602,7 +614,7 @@
     </section>
 
     <section class="slide flex middle">
-      <p class="lambda center moderate">λf.(λx.(f(xx)) λx.(f(xx)))</p>
+      <p class="lambda center sub2-big">λf.(λx.(f(xx)) λx.(f(xx)))</p>
     </section>
 
     <section class="slide flex middle">
@@ -626,28 +638,12 @@
     </section>
 
     <section class="slide flex middle">
-      <p class="lambda center big">λx.x</p>
-      <p class="js center moderate">x => x</p>
-    </section>
-
-    <section class="slide flex middle ">
-      <pre class="sub-moderate">
-        <code>x => x</code>
-	<code> </code>
-	<code>function(x) {</code>
-	<code> return x;</code>
-        <code>}</code>
-      </pre>
+      <p class="js center big">x => x</p>
     </section>
 
     <section class="slide flex middle">
       <p class="lambda center big">λx.x</p>
-      <p
-        class="js center
-    moderate"
-      >
-        x => x
-      </p>
+      <p class="js center big">x => x</p>
     </section>
 
     <section class="slide flex middle">
@@ -695,6 +691,10 @@
         <li class="next">Не имеет побочных эффектов</li>
         <li class="next">Возвращает значение</li>
       </ol>
+    </section>
+
+    <section class="slide flex middle">
+      <h2 class="center big">Referential transparency</h2>
     </section>
 
     <!--In computer science, an operation, function or expression is said to have a side effect
@@ -974,7 +974,7 @@
       <h3>Features of Immutability</h3>
       <ol class="sub-moderate">
         <li class="next">Easiness to reason about</li>
-        <li class="next">Mutithreading</li>
+        <li class="next">Multithreading</li>
       </ol>
     </section>
 

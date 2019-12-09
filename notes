@@ -1,0 +1,33 @@
+1. Disclaimer
+1.1 I'm not a pro
+1.2 I don't want to force you
+2. Functional programming (often abbreviated FP) is the process of building software by composing pure functions,
+avoiding shared state, mutable data, and side-effects. Functional programming is declarative rather than imperative,
+and application state flows through pure functions.
+
+ Contrast with object oriented programming, where application state is usually shared and collocated with methods in objects.
+Functional code tends to be more concise, more predictable, and easier to test than imperative or object oriented code — 
+but if you’re unfamiliar with it and the common patterns associated with it, functional code can also seem a lot more dense,
+and the related literature can be impenetrable to newcomers.
+6. One very common way people classify languages is to organize them into paradigms. You can think of a paradigm as a group of languages that share similar characteristics. There are many paradigms currently in use: procedural, functional, and object-oriented. Many of these terms are often misused or confused; there’s also some degree of overlap between different paradigms, which definitely doesn’t make things easier.
+ Существует два основных способа программирования. Первый и по историческим причинам самый распространенный, способ при котором программист дает компьютеру последовательность инструкций для того чтобы тот вел себя определенным образом.
+32. It's widely estimated that developers spend 70% of code maintenance time on reading to understand it. That is eye-opening. 70%. No wonder the global average for a programmer's lines of code written per day is about 10. We spend up to 7 hours of our day just reading the code to figure out where those 10 lines should go!
+43. В 30-х годах прошлого века, немецкий математик Дэвид Гилберт сформулировал так называемую "Проблему разрешения"
+44. Суть её в том, что вот есть у нас некий формальный язык, на котором можно написать какое-либо утверждение. Существует ли алгоритм, за конечное число шагов определяющий его истинность или ложность?
+45. Ответ был найден великим учёными того времени Аланом Тьюрингом.
+46. С помощью абстрактной вычислительной машины (машины Тьюринга он показал, что для арифметики такого алгоритма не существует в принципе, т.е. Entscheidungsproblem в общем случае неразрешима.
+49. Лямбда исчисление это как такой маленький язык программирования, в котором можно делать все тое что и в настоящих языках программирования, цифры, булевы значения, ветвления, рекурсию и черт знает что еще. Так лямбда-исчисление впервые громко заявило о себе, но ещё пару десятков лет продолжало быть достоянием математической логики.
+
+56. В середине 60-х Питер Ландин отметил, что сложный язык программирования проще изучать, сформулировав его ядро в виде небольшого базового исчисления, выражающего самые существенные механизмы языка и дополненного набором удобных производных форм, поведение которых можно выразить путем перевода на язык базового исчисления. В качестве такой основы Ландин использовал лямбда-исчисление Чёрча.
+57. Although not implemented, it has proved very influential in the development of programming languages, especially functional programming languages 
+ ISWIM is an imperative language with a functional core, consisting of a syntactic sugaring of lambda calculus to which are added mutable variables and assignment and a powerful control mechanism: the "program point" operator. Being based on lambda calculus ISWIM has higher order functions and lexically scoped variables.
+58.  David A. Turner (born 1946) is a British computer scientist. He is best known for designing and implementing the first functional programming languages based on lazy evaluation, combinator graph reduction, and polymorphic types:
+59. SASL (1972),
+60. KRC (1981),
+61. and the commercially supported Miranda (1985). The language was widely taken up, both for research and for teaching, and had a strong influence on the subsequent development of the field, influencing in particular the design of Haskell, to which it has many similarities.
+  Миранда был первым чистым функциональным языком, имевшим коммерческую поддержку, и был относительно популярен в 1980-х годах, но оставался собственническим программным обеспечением. Это затрудняло развитие и исследования возможностей ленивого функционального программирования, поэтому буквально за пару лет появилось более десятка схожих языков. Чтобы объединить усилия разных разработчиков в 1987 году на конференции по функциональным языкам программирования и компьютерной архитектуре в Орегоне (FPCA’87) было решено создать комитет для разработки открытого стандарта.
+62. Поэтому Собрался специальный комитет из отборнейших задротов и без лишнего шума создали его
+63. Хаскель на сегодня является эталоном функционального программирования. Хаскель это чистый функциональный язык программирования, первая версия которого была стандартизирована в 1990 году. Отличительная черта языка — серьёзное отношение к типизации; во многом в связи с этим язык назван
+64. в честь исследователя теории типов и изобретателя комбинаторной логики Хаскелла Карри. Это очень важный дядька, мало того что его именем назван Хаскель, так его фамилией также навали технику, которая применяется в математике и программировании -- каррирование.
+65. Язык Haskell известен благодаря синтаксису, в сравнении с которым пёрл выглядит псевдокодом, а также необходимостью глубокого понимания лямбда-исчисления, замыканий, теории графов, теории категорий, сопромата, анатомии мозга и прочего матана 
+66. даже для вывода на экран строки «Hello, World!»

@@ -55,10 +55,12 @@ img {
 .lambda {
   font-family: 'Charm', 'Alegreya Sans', sans-serif !important;
   margin: 0 !important;
+  line-height: 78px;
 }
 
 .js {
   font-family: 'Charm', 'Alegreya Sans', sans-serif !important;
+  margin: 0 !important;
 }
 code {
   font-family: 'Inconsolata', monospace !important;
