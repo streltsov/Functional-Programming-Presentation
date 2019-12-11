@@ -647,6 +647,24 @@
     </section>
 
     <section class="slide flex middle">
+      <p class="lambda center sub-big">Identity I := λx.x</p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda combinator">I := λx.x</p>
+      <p class="lambda center sub-big">
+        I(4)?
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda combinator">I := λx.x</p>
+      <p class="lambda center sub-big">
+        I(4) <span class="comment">// 4</span>
+      </p>
+    </section>
+
+    <section class="slide flex middle">
       <h2 class="center moderate">Pure Functions</h2>
     </section>
 
@@ -693,10 +711,6 @@
       </ol>
     </section>
 
-    <section class="slide flex middle">
-      <h2 class="center big">Referential transparency</h2>
-    </section>
-
     <!--In computer science, an operation, function or expression is said to have a side effect
       if it modifies some state variable value(s) outside its local environment,
       that is to say has an observable effect besides returning a value (the main effect)-->
@@ -716,7 +730,7 @@
     <section class="slide flex middle ">
       <pre class="sub-moderate">
         <code>function isInThePast(day) {</code>
-	<code>  return new Date().getDate() > day</code>
+	<code>  return new Date().getDate() < day</code>
         <code>}</code>
       </pre>
     </section>
@@ -734,15 +748,6 @@
       <code>function addProperty(object) {</code>
       <code>  object.theAnswer = 42;</code>
       <code>  return object;</code>
-      <code>}</code>
-      </pre>
-    </section>
-
-    <section class="slide flex middle ">
-      <pre class="sub-moderate">
-      <code>function addProperty(object) {</code>
-      <code>  const newObject = {...object, theAnswer: 42};</code>
-      <code>  return newObject;</code>
       <code>}</code>
       </pre>
     </section>
@@ -926,6 +931,12 @@
     </section>
 
     <section class="slide flex middle">
+      <h3 class="center sub-moderate bold">
+        Как программировать без переменных?
+      </h3>
+    </section>
+
+    <section class="slide flex middle">
       <pre class="sub-moderate">
         <code>let numbers = [4, 8, 15, 16, 23, 42];</code>
       </pre>
@@ -974,9 +985,11 @@
     </section>
 
     <section class="slide flex middle">
-      <h2 class="center moderate">
-        Persistent Data Structures
-      </h2>
+      <h3>Features of Immutability</h3>
+      <ol class="sub-moderate">
+        <li class="next">Easiness to reason about</li>
+        <li class="next">Mutithreading</li>
+      </ol>
     </section>
 
     <section class="slide flex middle">
@@ -992,19 +1005,34 @@
     </section>
 
     <section class="slide flex middle">
-      <p class="lambda center big">λx.x</p>
+      <p class="lambda center sub2-big">Mockingbird M := λf.ff</p>
     </section>
 
     <section class="slide flex middle">
-      <p class="lambda center big">(λx.x)(λx.x)</p>
+      <p class="lambda center sub-big">
+        M(fn) <span class="comment">// fn(fn)</span>
+      </p>
     </section>
 
     <section class="slide flex middle">
-      <p class="lambda center big">(λx.x)</p>
+      <p class="lambda combinator">M := λf.ff</p>
+      <p class="lambda center sub-big">
+        M(I)?
+      </p>
     </section>
 
     <section class="slide flex middle">
-      <p class="lambda center big">λx.x</p>
+      <p class="lambda combinator">M := λf.ff</p>
+      <p class="lambda center sub-big">
+        M(I) <span class="comment">// I</span>
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda combinator">M := λf.ff</p>
+      <p class="lambda center sub-big">
+        M(I) = I(I) = I
+      </p>
     </section>
 
     <section class="slide flex middle">
@@ -1019,6 +1047,15 @@
       </i>
     </section>
 
+    <section class="slide flex middle">
+      <i class="sub-moderate center">
+        <strong>Объекты первого класса?</strong>
+      </i>
+    </section>
+
+    <!-- Понятие объектов первого и второго классов было предложено в 1967 г. Кристофером Стрэчи в
+      статье «Understanding Programming Languages», где процедуры языка Алгол, в противоположность
+      действительным числам, он сравнил с подвергающимися социальной дискриминации «людьми второго сорта» (англ. second-class citizens) -->
     <section class="slide flex middle">
       <i class="sub-moderate">
         <strong>Обьектами первого класса</strong> называются элементы, которые
@@ -1101,7 +1138,7 @@
 
     <section class="slide flex middle">
       <h2 class="center moderate">
-        Higher order functions
+        High order functions
       </h2>
     </section>
 
@@ -1221,15 +1258,88 @@
     </section>
 
     <section class="slide flex middle">
-      <p class="lambda center big">
-        λx.λy.λz.xyz
+      <p class="lambda center sub-big">
+        Kestrel K := λab.a
       </p>
     </section>
 
-    <!-- currying is translating a function that takes multiple arguments
-      into a sequence of functions, each accepting one argument. -->
+    <section class="slide flex middle">
+      <p class="lambda combinator">
+        K := λab.a
+      </p>
+      <p class="lambda center sub-big">
+        K(I)(M)?
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda combinator">
+        K := λab.a
+      </p>
+      <p class="lambda center sub-big">
+        K(I)(M) <span class="comment">// I</span>
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda combinator">
+        K := λab.a
+      </p>
+      <p class="lambda center sub-big">
+        K(K)(M)?
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda combinator">
+        K := λab.a
+      </p>
+      <p class="lambda center sub-big">
+        K(K)(M) <span class="comment">// K</span>
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda combinator">
+        K := λab.a
+      </p>
+      <p class="lambda center sub-big">
+        K(I)(M)(M)?
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda combinator">
+        K := λab.a
+      </p>
+      <p class="lambda center sub-big">
+        K(I)(M)(M) <span class="comment">// M</span>
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda combinator">
+        K := λab.a
+      </p>
+      <p class="lambda center sub2-big">
+        K(I)(M)(M) = I(M) = M
+      </p>
+    </section>
+
+    <!-- A curried function is a function that takes multiple arguments one at a time.
+	Given a function with 3 parameters, the curried version will take one argument and
+	return a function that takes the next argument, which returns a function that takes the third argument.
+	The last function returns the result of applying the function to all of its arguments. -->
     <section class="slide flex middle">
       <h2 class="center moderate">Currying</h2>
+    </section>
+
+    <section class="slide flex middle">
+      <p>
+        <strong>Каррирование</strong> (от англ. currying, иногда — карринг) —
+        преобразование функции от многих аргументов в набор функций, каждая из
+        которых является функцией от одного аргумента.
+      </p>
     </section>
 
     <section class="slide flex middle">
@@ -1246,12 +1356,6 @@
 
     <section class="slide flex middle">
       <p class="lambda center sub3-moderate">
-        TypeError: sum(...) is not a function
-      </p>
-    </section>
-
-    <section class="slide flex middle">
-      <p class="lambda center sub3-moderate">
         sum x y = x + y
       </p>
     </section>
@@ -1270,13 +1374,76 @@
 
     <section class="slide flex middle">
       <p class="lambda center sub3-moderate">
-        sum x = \y -> x + y
+        sum x y = x + y
+      </p>
+      <p class="lambda center sub3-moderate">
+        λxy.x + y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum x y = x + y
+      </p>
+      <p class="lambda center sub3-moderate">
+        λx.λy.x + y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum x y = x + y
+      </p>
+      <p class="lambda center sub3-moderate">
+        <span class="glow">λx</span>.λy.x + y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum x y = x + y
+      </p>
+      <p class="lambda center sub3-moderate">
+        λx.<span class="glow">λy.x + y</span>
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum = \x -> \y -> x + y
+      </p>
+      <p class="lambda center sub3-moderate">
+        λx.λy.x + y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum = <span class="glow">\x</span> -> \y -> x + y
+      </p>
+      <p class="lambda center sub3-moderate">
+        <span class="glow">λx</span>.λy.x + y
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum = \x -> <span class="glow">\y -> x + y</span>
+      </p>
+      <p class="lambda center sub3-moderate">
+        λx.<span class="glow">λy.x + y</span>
       </p>
     </section>
 
     <section class="slide flex middle">
       <p class="lambda center sub3-moderate">
         map (sum 5) [1, 2, 3]
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        sum = \x -> <span class="glow">\y -> x + y</span>
       </p>
     </section>
 
@@ -1293,18 +1460,170 @@
     </section>
 
     <section class="slide flex middle">
-      <p class="lambda center big">λ</p>
+      <p class="lambda center sub3-moderate">
+        [1, 2, 3].map( sum(5) )
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        const sum = (x, y) => x + y;
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        const sum = x => y => x + y;
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        [1, 2, 3].map( sum(5) )
+      </p>
+    </section>
+
+    <!-- Curried functions are particularly useful in the context of function composition. -->
+    <section class="slide flex middle">
+      <p class="lambda center sub3-moderate">
+        [1, 2, 3].map( y => 5 + y )
+      </p>
     </section>
 
     <section class="slide flex middle">
       <p class="lambda center big">λ</p>
     </section>
+
+    <section class="slide flex middle">
+      <p class="lambda combinator">
+        K := λab.a
+      </p>
+      <p class="lambda center sub2-big">
+        K(I)(M)(I)?
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda combinator">
+        K := λab.a
+      </p>
+      <p class="lambda center sub2-big">
+        K(I)(M)(I) = I(I) = I
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda combinator">
+        K := λab.a
+      </p>
+      <p class="lambda center sub2-big">
+        K(I)(M)(4) = I(4) = 4
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda combinator">
+        K := λab.a
+      </p>
+      <p class="lambda center sub2-big">
+        K(I)(M)(8) = I(8) = 8
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda combinator">
+        K := λab.a
+      </p>
+      <p class="lambda center sub2-big">
+        K(I)(M)(f) = I(f) = f
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda combinator">
+        K := λab.a
+      </p>
+      <p class="lambda center sub3-big">
+        K(I)(M)(💩) = I(💩) = 💩
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub2-big">
+        KI = K(I)
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda combinator">
+        KI = K(I)
+      </p>
+      <p class="lambda center sub2-big">
+        KI(1)(2)?
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda combinator">
+        KI = K(I)
+      </p>
+      <p class="lambda center sub2-big">
+        KI(1)(2)<span class="comment"> // 2</span>
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub2-big">
+        KI = K(I)
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p class="lambda center sub2-big">
+        Kite KI := λab.b
+      </p>
+    </section>
+
+    <!--Each argument is taken one at a time. If the function had more parameters,
+      it could simply continue to return new functions until all of the arguments
+      are supplied and the application can be completed.-->
+    <!-- The parentheses in the example above represent function invocations: add is invoked with 2,
+	which returns a partially applied function with a fixed to 2. Instead of assigning the return value
+	to a variable or otherwise using it, we immediately invoke the returned function by passing 3 to it
+	in parentheses, which completes the application and returns 5.
+      -->
+    <!--A partial application is a function which has been applied to some, but not yet all of its arguments.
+	In other words, it’s a function which has some arguments fixed inside its closure scope.
+	A function with some of its parameters fixed is said to be partially applied.-->
 
     <!-- Composition -->
     <section class="slide flex middle">
       <h2 class="center moderate">Composition</h2>
     </section>
 
+    <!--It’s a technique to create new functions using existing functions.-->
+    <section class="slide flex middle">
+      <img class="center" src="pictures/composition.jpeg" alt="" />
+    </section>
+
+    <section class="slide flex middle">
+      <p>
+        <strong>Компози́ция</strong> (лат. compositio — составление, связывание,
+        сложение, соединение) — составление целого из частей.
+      </p>
+    </section>
+
+    <section class="slide flex middle">
+      <p>
+        <strong>Компози́ция фу́нкций</strong> (или суперпози́ция фу́нкций) — это
+        применение одной функции к результату другой.
+      </p>
+    </section>
+
+    <!--A key to function composition is having functions that are composable.
+      A composable function should have 1 input argument and 1 output value.-->
+
+    <!-- The power of function composition is realized as your codebase grows, allowing you to create numerous compositions. -->
     <section class="slide flex middle">
       <p class="lambda center sub3-moderate">
         ["1", "2", "3"].map( parseInt );
@@ -1326,7 +1645,6 @@
       </p>
     </section>
 
-    /* Partial Application */
     <section class="slide flex middle">
       <p class="lambda center sub3-moderate">
         const sum = x => y => x + y;
